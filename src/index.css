@@ -11,7 +11,17 @@
   --header-outline-color: hsl(217, 16%, 45%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-image: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  font-family: 'Barlow Semi Condensed', sans-serif;
+
+  min-height: 100vh;
+  color: var(--light-color);
 }
