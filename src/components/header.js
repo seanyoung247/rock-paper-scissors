@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Score from './score.js';
 
+import './header.css';
+
 class Header extends Component {
   render() {
     return (
