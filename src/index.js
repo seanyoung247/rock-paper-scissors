@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './index.css';
+
 import Header from './components/header.js';
 import GamePanel from './components/gamepanel.js';
 
-import './index.css';
-
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <GamePanel />
+    <header>
+      <Header />
+    </header>
+    <section>
+      <GamePanel />
+    </section>
   </React.StrictMode>,
   document.getElementById('root')
 );
