@@ -32,7 +32,7 @@ html {
 
 body {
   max-width: var(--mobile-width);
-  padding: 25px;
+  padding: 30px;
   margin: auto;
 }
 
