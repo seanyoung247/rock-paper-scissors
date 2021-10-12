@@ -5,6 +5,7 @@ import './index.css';
 
 import Header from './components/header.js';
 import GamePanel from './components/gamepanel.js';
+import Button from './components/button.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,9 @@ ReactDOM.render(
     <section>
       <GamePanel />
     </section>
+    <footer>
+      <Button title="Rules" clickHandler={()=>console.log('Rules!')} />
+    </footer>
   </React.StrictMode>,
   document.getElementById('root')
 );
