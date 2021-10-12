@@ -23,3 +23,18 @@
   font-weight: 700;
   font-size: 32px;
 }
+
+/*
+ * Desktop styles
+ */
+@media only screen and (min-width: 1366px) {
+  .score-panel {
+    padding: 5px 40px;
+  }
+  .score-title {
+    font-size: 18px;
+  }
+  .score-display {
+    font-size: 64px;
+  }
+}
