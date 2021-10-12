@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 class Score extends Component {
   constructor(props) {
     super(props);
-    this.state = {score: 0};
+    this.state = {score: 12};
   }
   render() {
     return (
-      <div>
-        <p> Score </p>
-        <p> {this.state.score} </p>
+      <div className="score-panel">
+        <p className="score-title"> Score </p>
+        <p className="score-display"> {this.state.score} </p>
       </div>
     );
   }
