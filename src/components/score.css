@@ -1,0 +1,25 @@
+.score-panel {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--score-color);
+  padding: 5px 20px;
+  border-radius: 5px;
+  height: 100%;
+
+  text-transform: uppercase;
+}
+
+.score-panel p {
+  text-align: center;
+  margin: 0;
+}
+
+.score-title {
+  font-size: 12px;
+}
+
+.score-display {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 32px;
+}
