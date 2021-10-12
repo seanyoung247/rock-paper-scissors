@@ -4,9 +4,9 @@
   width: 100%;
   border: 3px solid var(--header-outline-color);
   border-radius: 10px;
-  padding: 10px;
+  padding: 17px;
 
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .title {
@@ -28,10 +28,15 @@
 /*
  * Desktop styles
  */
-
 @media only screen and (min-width: 1366px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
   .title-bar {
-      max-width: 700px;
-      margin: auto;
+    max-width: 700px;
+  }
+  .title p {
+    font-size: 34px;
   }
 }

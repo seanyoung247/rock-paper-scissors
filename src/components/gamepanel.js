@@ -8,7 +8,7 @@ class GamePanel extends Component {
       <div id='test'>
         <p>Game goes here</p>
       </div>
-    )
+    );
   }
 }
 
