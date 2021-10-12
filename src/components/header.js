@@ -4,14 +4,16 @@ import Score from './score.js';
 class Header extends Component {
   render() {
     return (
-      <header>
-        <div>
+      <div className="title-bar">
+        <div className="title">
           <p>Rock</p>
           <p>Paper</p>
           <p>Scissors</p>
         </div>
-        <Score />
-      </header>
+        <div className="score-wrapper">
+          <Score />
+        </div>
+      </div>
     );
   }
 }
