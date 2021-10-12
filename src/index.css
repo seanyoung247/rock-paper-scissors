@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 :root {
-  /* Sizes */
+  /* Screen Sizes */
   --mobile-width: 375px;
   --desktop-width: 1366px;
   /* Colours */
@@ -9,6 +9,10 @@
   --dark-color: hsl(229, 25%, 31%);
   --score-color: hsl(229, 64%, 46%);
   --header-outline-color: hsl(217, 16%, 45%);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -28,8 +32,8 @@ html {
 
 body {
   max-width: var(--mobile-width);
+  padding: 25px;
   margin: auto;
-  border: 1px solid white;
 }
 
  /*
