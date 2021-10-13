@@ -6,8 +6,14 @@ class Button extends Component {
     this.state = {
       title: props.title,
       clickHandler: props.clickHandler
+      clickHandler: (props.clickHandler ? props.clickHandler : this.clickHandler)
     };
   }
+
+  clickHandler = () => {
+    console.log("default");
+  }
+
   render() {
     return (
       <button onClick={ this.state.clickHandler }>
