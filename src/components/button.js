@@ -4,6 +4,7 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: props.id,
       title: props.title,
       className: props.className,
       clickHandler: (props.clickHandler ? props.clickHandler : this.clickHandler)
@@ -16,7 +17,9 @@ class Button extends Component {
 
   render() {
     return (
-      <button className={this.state.className} onClick={ this.state.clickHandler }>
+      <button id={ this.state.id }
+        className={ this.state.className } 
+        onClick={ this.state.clickHandler }>
         { this.state.title }
       </button>
     );

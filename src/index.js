@@ -16,7 +16,7 @@ ReactDOM.render(
       <GamePanel />
     </section>
     <footer>
-      <Button title="Rules" className="test" clickHandler={()=>console.log('Rules!')} />
+      <Button title="Rules" id="rulesBtn" className="test" clickHandler={()=>console.log('Rules!')} />
     </footer>
   </React.StrictMode>,
   document.getElementById('root')
