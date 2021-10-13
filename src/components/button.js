@@ -7,20 +7,22 @@ class Button extends Component {
       id: props.id,
       title: props.title,
       className: props.className,
-      clickHandler: (props.clickHandler ? props.clickHandler : this.clickHandler)
+      onClick: (props.onClick ? props.onClick : this.onClick),
+      showModal: false
     };
   }
 
-  clickHandler = () => {
-    console.log("default");
+  onClick = () => {
+    this.setState
   }
 
   render() {
     return (
       <button id={ this.state.id }
-        className={ this.state.className } 
-        onClick={ this.state.clickHandler }>
-        { this.state.title }
+        className={ this.state.className }
+        onClick={ this.state.onClick }>
+
+          { this.state.title }
       </button>
     );
   }
