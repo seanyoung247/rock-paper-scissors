@@ -5,7 +5,7 @@ class Button extends Component {
     super(props);
     this.state = {
       title: props.title,
-      clickHandler: props.clickHandler
+      className: props.className,
       clickHandler: (props.clickHandler ? props.clickHandler : this.clickHandler)
     };
   }
@@ -16,7 +16,7 @@ class Button extends Component {
 
   render() {
     return (
-      <button onClick={ this.state.clickHandler }>
+      <button className={this.state.className} onClick={ this.state.clickHandler }>
         { this.state.title }
       </button>
     );
