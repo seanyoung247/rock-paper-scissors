@@ -18,8 +18,7 @@ ReactDOM.render(
     <footer>
       <Button id="rulesBtn"
         title="Rules"
-        className="test"
-        onClick={()=>console.log('Rules!')} />
+        className="test" />
     </footer>
   </React.StrictMode>,
   document.getElementById('root')
