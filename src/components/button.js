@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from './modal.js';
 
 class Button extends Component {
   constructor(props) {
@@ -13,17 +14,25 @@ class Button extends Component {
   }
 
   onClick = () => {
-    this.setState
+    console.log("called!");
+    this.setState(function(state, props) {
+      console.log(state.showModal);
+      return {showModal: !state.showModal};
+    });
   }
 
   render() {
+    console.log("rendering", this.state.showModal);
     return (
-      <button id={ this.state.id }
-        className={ this.state.className }
-        onClick={ this.state.onClick }>
+      <div>
+        <button id={ this.state.id }
+          className={ this.state.className }
+          onClick={ this.state.onClick }>
 
-          { this.state.title }
-      </button>
+            { this.state.title }
+        </button>
+        <Modal show={this.state.showModal} />
+      </div>
     );
   }
 }
