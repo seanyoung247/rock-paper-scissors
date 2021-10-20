@@ -9,16 +9,11 @@ class Button extends Component {
       title: props.title,
       className: props.className,
       onClick: (props.onClick ? props.onClick : this.onClick),
-      showModal: false
     };
   }
 
   onClick = () => {
-    console.log("called!");
-    this.setState(function(state, props) {
-      console.log(state.showModal);
-      return {showModal: !state.showModal};
-    });
+    console.log("not implemented!");
   }
 
   render() {
@@ -31,7 +26,6 @@ class Button extends Component {
 
             { this.state.title }
         </button>
-        <Modal show={this.state.showModal} />
       </div>
     );
   }

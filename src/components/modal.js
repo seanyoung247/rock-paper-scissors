@@ -5,11 +5,8 @@ class Modal extends Component {
     super(props);
     this.state = {show: props.show};
   }
-  componentWillReceiveProps(nextProps) {
-    this.setState({show: nextProps.show});  
-  }
+
   render() {
-    console.log("modal",this.state.show)
     return (
       this.state.show && (
         <p>Test</p>
