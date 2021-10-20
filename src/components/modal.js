@@ -6,7 +6,11 @@ import './modal.css';
 class Modal extends Component {
   constructor(props) {
     super(props);
-    this.state = {show: props.show || false};
+    this.state = {
+      id: props.id,
+      title: props.title,
+      show: props.show || false
+    };
     this.toggleShow = this.toggleShow.bind(this);
   }
 
