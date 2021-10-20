@@ -16,9 +16,23 @@ class Modal extends Component {
 
   render() {
     return (
+      <div>
         <Button
           title="Rules"
           onClick={this.toggleShow} />
+        {
+          this.state.show && (
+            <div className="modal-wrapper">
+              <div className="modal-dialog">
+                <h1>Rules</h1>
+                <Button
+                  title='x'
+                  onClick={this.toggleShow} />
+              </div>
+            </div>
+          )
+        }
+      </div>
     );
   }
 }
