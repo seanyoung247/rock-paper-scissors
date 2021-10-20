@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './button.js';
 
 class Modal extends Component {
   constructor(props) {
@@ -8,6 +9,9 @@ class Modal extends Component {
 
   render() {
     return (
+        <Button
+          title="Rules"
+          onClick={this.toggleShow} />
     );
   }
 }
