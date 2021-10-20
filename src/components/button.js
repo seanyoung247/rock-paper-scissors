@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Modal from './modal.js';
 
 class Button extends Component {
   constructor(props) {
@@ -17,16 +16,13 @@ class Button extends Component {
   }
 
   render() {
-    console.log("rendering", this.state.showModal);
     return (
-      <div>
-        <button id={ this.state.id }
-          className={ this.state.className }
-          onClick={ this.state.onClick }>
+      <button id={ this.state.id }
+        className={ this.state.className }
+        onClick={ this.state.onClick }>
 
-            { this.state.title }
-        </button>
-      </div>
+          { this.state.title }
+      </button>
     );
   }
 }
