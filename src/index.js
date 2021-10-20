@@ -16,7 +16,7 @@ ReactDOM.render(
       <GamePanel />
     </section>
     <footer>
-      <Modal show={false} />
+      <Modal id="rules-modal" title="rules" show={false} />
     </footer>
   </React.StrictMode>,
   document.getElementById('root')
