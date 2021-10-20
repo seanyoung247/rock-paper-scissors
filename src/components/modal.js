@@ -21,8 +21,17 @@ class Modal extends Component {
   }
 
   render() {
+  modalContent() {
     return (
       <div>
+        <h2>Not Yet Implemented</h2>
+        <Button
+          title="Close"
+          className="modal-close"
+          onClick={this.toggleShow} />
+      </div>
+    );
+  }
         <Button
           title="Rules"
           onClick={this.toggleShow} />
