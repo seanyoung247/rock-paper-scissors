@@ -28,7 +28,8 @@ class Modal extends Component {
               <div className="modal-dialog">
                 <h1>Rules</h1>
                 <Button
-                  title='x'
+                  title="Close"
+                  className="modal-close"
                   onClick={this.toggleShow} />
               </div>
             </div>
