@@ -28,7 +28,7 @@ class Modal extends Component {
               <div className="modal-dialog">
                 <h1>Rules</h1>
                 <Button
-                  title="Close"
+                  title={<img src="images/icon-close.svg" />}
                   className="modal-close"
                   onClick={this.toggleShow} />
               </div>
