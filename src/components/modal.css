@@ -24,4 +24,11 @@
   font-size: 24px;
   color: var(--header-outline-color);
 }
+
+.modal-dialog > h1 {
+  color: var(--dark-color);
+  text-transform: uppercase;
+
+  margin: 0;
+}
 }
