@@ -20,7 +20,6 @@ class Modal extends Component {
     }));
   }
 
-  render() {
   modalContent() {
     return (
       <div>
@@ -32,18 +31,18 @@ class Modal extends Component {
       </div>
     );
   }
+
+  render() {
+    return (
+      <div id={this.state.id}>
         <Button
-          title="Rules"
+          title={this.state.title}
           onClick={this.toggleShow} />
         {
           this.state.show && (
             <div className="modal-wrapper">
               <div className="modal-dialog">
-                <h1>Rules</h1>
-                <Button
-                  title={<img src="images/icon-close.svg" />}
-                  className="modal-close"
-                  onClick={this.toggleShow} />
+                {this.modalContent()}
               </div>
             </div>
           )
