@@ -34,5 +34,14 @@
  * Desktop styles
  */
 @media only screen and (min-width: 1366px) {
+  .modal-dialog {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
 
+    background-color: white;
+  }
 }
