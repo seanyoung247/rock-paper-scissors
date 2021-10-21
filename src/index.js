@@ -5,7 +5,7 @@ import './index.css';
 
 import Header from './components/header.js';
 import GamePanel from './components/gamepanel.js';
-import Modal from './components/modal.js';
+import RulesModal from './components/rulesmodal.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +16,7 @@ ReactDOM.render(
       <GamePanel />
     </section>
     <footer>
-      <Modal id="rules-modal" title="rules" show={false} />
+      <RulesModal id="rules-modal" title="rules" show={false} />
     </footer>
   </React.StrictMode>,
   document.getElementById('root')
