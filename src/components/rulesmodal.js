@@ -1,6 +1,7 @@
 import Modal from './modal.js';
 import Button from './button.js';
 
+import './rulesmodal.css';
 import closeIcon from '../images/icon-close.svg';
 
 class RulesModal extends Modal {
