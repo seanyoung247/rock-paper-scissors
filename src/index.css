@@ -36,14 +36,9 @@ body {
   margin: auto;
 }
 
-.test {
-  color: red;
-}
-
  /*
   * Desktop styles
   */
-
 @media only screen and (min-width: 1366px) {
   body {
     max-width: var(--desktop-width);
