@@ -47,4 +47,8 @@ body {
   body {
     max-width: var(--desktop-width);
   }
+  footer {
+    margin: auto;
+    max-width: var(--desktop-width);
+  }
 }
