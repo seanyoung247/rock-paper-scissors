@@ -9,16 +9,6 @@
   font-weight: 700;
 }
 
-.title {
-  padding: 10px;
-}
-
-.title p {
-  font-size: 20px;
-  text-transform: uppercase;
-  line-height: 80%;
-  padding: 0;
-  margin: 0;
 }
 
 .score-wrapper {
@@ -34,9 +24,6 @@
     justify-content: center;
   }
   .title-bar {
-    max-width: 700px;
   }
-  .title p {
-    font-size: 34px;
   }
 }
