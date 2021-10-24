@@ -1,0 +1,11 @@
+.modal-trigger {
+  text-transform: uppercase;
+
+  width: 130px;
+  height: 42px;
+
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+}
