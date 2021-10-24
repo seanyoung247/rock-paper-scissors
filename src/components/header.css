@@ -9,6 +9,8 @@
   font-weight: 700;
 }
 
+.title img {
+  width: 75%;
 }
 
 .score-wrapper {
@@ -24,6 +26,9 @@
     justify-content: center;
   }
   .title-bar {
+    max-width: var(--desktop-content-width);
   }
+  .title img {
+    width: 60%;
   }
 }
