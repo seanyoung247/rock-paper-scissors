@@ -9,3 +9,22 @@
   border: 2px solid white;
   border-radius: 10px;
 }
+
+.rules-title {
+
+}
+
+.rules-image {
+  
+}
+
+@media only screen and (min-width: 1366px) {
+  .modal-dialog {
+    position: relative;
+    width: 400px;
+    height: auto;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+  }
+}
