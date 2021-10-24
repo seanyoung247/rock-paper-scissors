@@ -3,7 +3,9 @@
 :root {
   /* Screen Sizes */
   --mobile-width: 375px;
+  --mobile-content-width: 375px;
   --desktop-width: 1366px;
+  --desktop-content-width: 700px;
   /* Colours */
   --light-color: white;
   --dark-color: hsl(229, 25%, 31%);
