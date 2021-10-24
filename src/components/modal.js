@@ -37,6 +37,7 @@ class Modal extends Component {
       <div id={this.state.id}>
         <Button
           title={this.state.title}
+          className="modal-trigger"
           onClick={this.toggleShow} />
         {
           this.state.show && (
