@@ -23,7 +23,7 @@
     justify-content: center;
   }
   .title-bar {
-    max-height: var(--desktop-content-width);
+    max-width: var(--desktop-content-width);
   }
   .title img {
     max-height: 95px;
