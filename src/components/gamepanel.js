@@ -5,7 +5,7 @@ import './gamepanel.css';
 class GamePanel extends Component {
   render() {
     return (
-      <div id='test'>
+      <div id='gamePanel'>
         <p>Game goes here</p>
       </div>
     );
