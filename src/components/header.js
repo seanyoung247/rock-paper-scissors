@@ -4,13 +4,16 @@ import Score from './score.js';
 import './header.css';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {title: props.title};
+  }
+
   render() {
     return (
       <div className="title-bar">
         <div className="title">
-          <p>Rock</p>
-          <p>Paper</p>
-          <p>Scissors</p>
+          {this.state.title}
         </div>
         <div className="score-wrapper">
           <Score />
