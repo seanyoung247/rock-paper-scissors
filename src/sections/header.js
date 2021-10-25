@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from '../images/logo.svg';
-import logoBonus from '../images/logo-bonus.svg';
+import './header.css'
 
 class Header extends Component {
   render() {
@@ -9,7 +8,7 @@ class Header extends Component {
       <header>
         <div className="title-bar">
           <div className="title">
-            <img src={logo} alt="Rock Paper Sissors" />
+            {this.props.title}
           </div>
           <div className="score-wrapper">
 

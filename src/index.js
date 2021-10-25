@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header />
+        <Header title={<img src={logo} alt="Rock Paper Sissors" />}/>
         <section>
           GAME HERE
         </section>
