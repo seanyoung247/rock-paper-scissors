@@ -3,15 +3,29 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import logo from './images/logo.svg';
-import logoBonus from './images/logo-bonus.svg';
+//import logoBonus from './images/logo-bonus.svg';
 
 import Header from './sections/header.js';
 import Score from './components/score.js';
 import GamePanel from './components/gamepanel.js';
-import Modal from './components/modal.js';
-//import RulesModal from './components/rulesmodal.js';
+import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showRules: false
+    };
+
+    this.toggleShow = this.toggleShow.bind(this);
+  }
+
+  toggleShow() {
+    this.setState((state, props)=>({
+      showRules: !state.showRules
+    }));
+  }
+
   render() {
     return (
       <React.StrictMode>
@@ -19,10 +33,10 @@ class App extends React.Component {
           <Score score={0} />
         </Header>
         <section>
-          GAME HERE
+          <GamePanel />
         </section>
         <footer>
-          <Modal show={false} />
+          <RulesModal toggle={this.toggleShow} show={this.state.showRules} />
         </footer>
       </React.StrictMode>
     );
