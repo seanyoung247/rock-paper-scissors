@@ -20,7 +20,7 @@ class RulesModal extends Modal {
         </div>
         <Button
           title={<img src={closeIcon} alt="Close" />}
-          className="modal-close"
+          className="modal-close rules-close"
           onClick={this.toggleShow} />
       </div>
     );

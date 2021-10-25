@@ -7,6 +7,12 @@ class Score extends Component {
     super(props);
     this.state = {score: 12};
   }
+  componentDidUpdate(prevProps) {
+    const newProps = this.props;
+    if (prevProps.score != newProps.score) {
+      this.state.score = newProps.score;
+    }
+  }
   render() {
     return (
       <div className="score-panel">
