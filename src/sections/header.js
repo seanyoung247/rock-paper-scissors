@@ -11,7 +11,7 @@ class Header extends Component {
             {this.props.title}
           </div>
           <div className="score-wrapper">
-
+            {this.props.children}
           </div>
         </div>
       </header>
