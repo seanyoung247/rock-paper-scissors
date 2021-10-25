@@ -47,10 +47,6 @@ body {
   body {
     max-width: var(--desktop-width);
   }
-  header {
-    display: flex;
-    justify-content: center;
-  }
   footer {
     margin: auto;
     max-width: var(--desktop-width);

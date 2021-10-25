@@ -19,6 +19,10 @@
  * Desktop styles
  */
 @media only screen and (min-width: 1366px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
   .title-bar {
     max-width: var(--desktop-content-width);
   }
