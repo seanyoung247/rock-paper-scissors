@@ -8,6 +8,7 @@ import logoBonus from './images/logo-bonus.svg';
 import Header from './sections/header.js';
 import Score from './components/score.js';
 import GamePanel from './components/gamepanel.js';
+import Modal from './components/modal.js';
 //import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
@@ -21,7 +22,7 @@ class App extends React.Component {
           GAME HERE
         </section>
         <footer>
-          RULES MODAL
+          <Modal show={false} />
         </footer>
       </React.StrictMode>
     );
@@ -29,18 +30,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />,document.getElementById('root'));
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <header>
-//       <Header title={<img src={logo} alt="Rock Paper Sissors" />}/>
-//     </header>
-//     <section>
-//       <GamePanel />
-//     </section>
-//     <footer>
-//       <RulesModal id="rules-modal" title="rules" show={false} />
-//     </footer>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
