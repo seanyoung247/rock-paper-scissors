@@ -51,6 +51,8 @@ body {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
   width: var(--mobile-content-width);
   padding: 30px;
 }
@@ -63,6 +65,7 @@ footer {
     width: var(--desktop-width);
   }
   footer {
+    justify-content: flex-end;
     width: var(--desktop-width);
   }
 }
