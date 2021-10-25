@@ -5,7 +5,7 @@ import './index.css';
 import logo from './images/logo.svg';
 import logoBonus from './images/logo-bonus.svg';
 
-//import Header from './components/header.js';
+import Header from './sections/header.js';
 import GamePanel from './components/gamepanel.js';
 //import RulesModal from './components/rulesmodal.js';
 
@@ -13,16 +13,13 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <header>
-          <div className="title-bar">
-            <div className="title">
-              <img src={logo} alt="Rock Paper Sissors" />
-            </div>
-            <div className="score-wrapper">
-
-            </div>
-          </div>
-        </header>
+        <Header />
+        <section>
+          GAME HERE
+        </section>
+        <footer>
+          RULES MODAL
+        </footer>
       </React.StrictMode>
     );
   }
