@@ -1,3 +1,7 @@
+header {
+  width: var(--mobile-content-width);
+  padding: 30px;
+}
 
 .title-bar {
   display: flex;
@@ -12,7 +16,7 @@
 }
 
 .title img {
-  max-height: 48px;
+  height: 48px;
 }
 
 /*
@@ -22,11 +26,12 @@
   header {
     display: flex;
     justify-content: center;
+    width: var(--desktop-content-width);
   }
   .title-bar {
-    max-width: var(--desktop-content-width);
+    width: var(--desktop-content-width);
   }
   .title img {
-    max-height: 95px;
+    height: 95px;
   }
 }
