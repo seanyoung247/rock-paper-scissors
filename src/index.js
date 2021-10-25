@@ -5,9 +5,9 @@ import './index.css';
 import logo from './images/logo.svg';
 import logoBonus from './images/logo-bonus.svg';
 
-import Header from './components/header.js';
+//import Header from './components/header.js';
 import GamePanel from './components/gamepanel.js';
-import RulesModal from './components/rulesmodal.js';
+//import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
   render() {
