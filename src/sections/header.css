@@ -1,0 +1,28 @@
+
+.title-bar {
+  display: flex;
+  width: 100%;
+  border: 3px solid var(--header-outline-color);
+  border-radius: 10px;
+  padding: 17px;
+
+  font-weight: 700;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title img {
+  max-height: 48px;
+}
+
+/*
+ * Desktop styles
+ */
+@media only screen and (min-width: 1366px) {
+  .title-bar {
+    max-width: var(--desktop-content-width);
+  }
+  .title img {
+    max-height: 95px;
+  }
+}
