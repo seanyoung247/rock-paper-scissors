@@ -8,6 +8,18 @@ import closeIcon from '../images/icon-close.svg';
 import rulesImage from '../images/image-rules.svg';
 
 class RulesModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { show: this.props.show };
+    this.toggleShow = this.toggleShow.bind(this);
+  }
+
+  toggleShow() {
+    this.setState((state, props)=>({
+      show: !state.show
+    }));
+  }
+
   render() {
     return (
       <Fragment>

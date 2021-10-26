@@ -11,21 +11,6 @@ import GamePanel from './components/gamepanel.js';
 import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showRules: false
-    };
-
-    this.toggleShow = this.toggleShow.bind(this);
-  }
-
-  toggleShow() {
-    this.setState((state, props)=>({
-      showRules: !state.showRules
-    }));
-  }
-
   render() {
     return (
       <React.StrictMode>
@@ -36,7 +21,7 @@ class App extends React.Component {
           <GamePanel />
         </section>
         <footer>
-          <RulesModal toggle={this.toggleShow} show={this.state.showRules} />
+          <RulesModal show={false} />
         </footer>
       </React.StrictMode>
     );
