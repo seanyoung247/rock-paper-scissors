@@ -16,8 +16,14 @@ class GamePanel extends Component {
     super(props);
     this.state = {
       step: 1
-    }
+    };
+
   }
+
+  stepOne() {}
+  stepTwo() {}
+  stepThree() {}
+
   render() {
     return (
       <div id='gamePanel'>
