@@ -5,18 +5,28 @@ class Game {
   constructor() {
     this.choices = basic;
   }
+  
   /**
    * Returns the string value of a given numeric choice
    */
   getValue(choice) {
     return this.choices[choice];
   }
+  
   /**
    * Returns the total number of available choices
    */
   get choiceCount() {
     return this.choices.length;
   }
+  
+  /**
+   * Returns the available choices
+   */
+  get choices() {
+    return this.choices;
+  }
+  
   /**
    * Returns a random value within the range of available choices
    */
