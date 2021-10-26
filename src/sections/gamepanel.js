@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './gamepanel.css';
 
+import Game from '../logic/game.js';
+
 class GamePanel extends Component {
   constructor(props) {
     super(props);
@@ -16,9 +18,10 @@ class GamePanel extends Component {
   stepThree() {}
 
   render() {
+    const game = new Game();
     return (
       <div id='gamePanel'>
-        <p>Game goes here</p>
+        {game.choices.map((data, index)=>(<p key={index}>{data}</p>))}
       </div>
     );
   }
