@@ -8,7 +8,9 @@ class GamePanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 1
+      step: 1,
+      player1: -1,
+      player2: -1
     };
     this.game = new Game();
   }
