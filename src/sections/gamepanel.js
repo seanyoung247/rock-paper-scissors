@@ -10,7 +10,7 @@ class GamePanel extends Component {
     this.state = {
       step: 1
     };
-
+    this.game = new Game();
   }
 
   stepOne() {}
@@ -18,10 +18,9 @@ class GamePanel extends Component {
   stepThree() {}
 
   render() {
-    const game = new Game();
     return (
       <div id='gamePanel'>
-        {game.choices.map((data, index)=>(<p key={index}>{data}</p>))}
+        {this.game.choices.map((data, index)=>(<p key={index}>{data}</p>))}
       </div>
     );
   }
