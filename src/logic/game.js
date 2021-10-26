@@ -6,8 +6,12 @@ class Game {
     this.choices = basic;
   }
   
-  getChoice(choice) {
+  getValue(choice) {
     return this.choices[choice];
+  }
+  
+  get choiceCount() {
+    return this.choices.length;
   }
 }
 
