@@ -11,14 +11,26 @@ import GamePanel from './components/gamepanel.js';
 import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {score: 0};
+    this.incScore = this.incScore.bind(this);
+  }
+
+  incScore(inc = 1) {
+    this.setState((state, props)=>({
+      score: state.score + inc
+    }));
+  }
+
   render() {
     return (
       <React.StrictMode>
         <Header title={<img src={logo} alt="Rock Paper Sissors" />}>
-          <Score score={0} />
+          <Score score={this.state.score} />
         </Header>
         <section>
-          <GamePanel />
+          <GamePanel incScore={this.incScore} />
         </section>
         <footer>
           <RulesModal show={false} />
