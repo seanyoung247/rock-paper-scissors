@@ -7,7 +7,7 @@ import logo from './images/logo.svg';
 
 import Header from './sections/header.js';
 import Score from './components/score.js';
-import GamePanel from './components/gamepanel.js';
+import GamePanel from './sections/gamepanel.js';
 import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
