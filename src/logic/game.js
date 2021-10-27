@@ -7,7 +7,13 @@ const basic = ["rock", "paper", "scissors"];
 class Game {
   constructor() {
     this._choices = basic;
+    this._players = [
+      { id: 1, name: "You", choice: -1 },
+      { id: 2, name: "The House", choice: -1}
+    ];
   }
+  
+  // Getter and Setters
 
   /**
    * Returns the string value of a given numeric choice
@@ -32,6 +38,19 @@ class Game {
   get choices() {
     return this._choices;
   }
+  
+  /**
+   * Returns the player object for given player id
+   *  @param {number} player - the player id number
+   */
+  getPlayer(player) {
+    if (this.isValidPlayer(player)) {
+      return this._players
+    }
+    return null;
+  }
+  
+  // Helper functions
 
   /**
    * Returns a random value within the range of available choices
@@ -42,10 +61,31 @@ class Game {
 
   /**
    * Returns true if the given choice is valid
-   *  @param {number} choice numeric index of choice
+   *  @param {number} choice - numeric index of choice
+   *  @returns {boolean}
    */
   isValidChoice(choice) {
-    return (choice > 0 && choice < this._choices.length);
+    return (choice >= 0 && choice < this._choices.length);
+  }
+  
+  /**
+   * Returns true if the given player is valid
+   *  @param {number} player - numeric index of player
+   *  @returns {boolean}
+   */
+  isValidPlayer(player) {
+    return (player >= 0 && player < this._players.length);
+  }
+  
+  /**
+   * Returns true if all players have picked a choice
+   *  @returns {boolean}
+   */
+  _allPlayersHavePicked() {
+    for (let i=0; i<this._players.length; i++) {
+      if (!this.isValidChoice(this._players[i].choice)) return false;
+    }
+    return true;
   }
 
   /**
@@ -54,7 +94,7 @@ class Game {
    *  @param {number} p2 numeric index of player two choice (0..n-1)
    *  @returns 0 if tie, 1 if player 1, 2 if player 2
    */
-  checkWinner(p1, p2) {
+  _checkWinner(p1, p2) {
     // Works by splitting the list of options in half using choice one as the
     // pivot and wrapping at the ends. If choice two is in the "high" half it
     // wins, if it is in the low half it loses. Correct choice array order is
@@ -65,6 +105,47 @@ class Game {
     if (p1 === p2) return 0;                        // Tie
     if (mod(p1 - p2, count) < count / 2) return 1;  // Player one wins
     else return 2;                                  // Player two wins
+  }
+  
+  // Game State handling
+  
+  /**
+   * Sets a given player's choice
+   *  @param {number} player - Player id
+   *  @param {number} choice - Choice id
+   */
+  setPlayerChoice(player, choice) {
+    if (this.isValidChoice(choice) && this.isValidPlayer(player)) {
+      this._players[player].choice = choice;
+    }
+  }
+  
+  /**
+   * Returns the winning player object
+   *  @returns {Object}
+   */
+  getWinner() {
+    if (this._allPlayersHavePicked()) {
+      const winner = this._checkWinner(
+        this._players[0].choice,
+        this._players[1].choice
+      );
+      if (winner) {
+        return this._players[winner-1];
+      } else {
+        return { id: 0, name: "Tie", choice: -1}
+      }
+    }
+    return null;
+  }
+  
+  /**
+   * Resets the game logic state
+   */
+  resetGame() {
+    for (let i=0; i<this._players.length; i++) {
+      this._players[i].choice = -1;
+    }
   }
 }
 
