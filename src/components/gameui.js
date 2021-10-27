@@ -20,18 +20,18 @@ class GameUI extends Component {
           <Chooser choices={this.game.choices} player={1} choose={this.setChoice} />
       },
       {
-        setup: null, // step timer
+        setup: ()=>setTimeout(()=>this.setStep(2), 1000), // step timer
         render: ()=>
           <Display
             player1={this.game.getPlayer(1).choice}
             player2={this.game.getPlayer(2).choice} />
       },
       {
-        setup: null, // computer choice, step timer
+        setup: ()=>setTimeout(()=>this.setStep(3), 1000), // computer choice, step timer
         render: ()=>this.stepThree()
       },
       {
-        setup: null, // check winner
+        setup: ()=>console.log("Step Four"), // check winner
         render: ()=>this.stepFour()
       }
     ];
