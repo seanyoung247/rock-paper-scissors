@@ -43,7 +43,6 @@ class GameUI extends Component {
   }
 
   setChoice(player, choice) {
-    console.log(this.game.getPlayer(player).name + " chose " + this.game.getValue(choice));
     this.game.setPlayerChoice(player, choice);
     this.setStep(this.state.step + 1);
   }
