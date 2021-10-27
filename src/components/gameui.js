@@ -40,6 +40,7 @@ class GameUI extends Component {
   setStep(step) {
     this.setState({step: step});
     // Do actions for next step here
+    this.steps[step].setup();
   }
 
   setChoice(player, choice) {
