@@ -2,9 +2,12 @@
 function Display(props) {
   const game = props.game;
   const winner = game.winner;
+  const p1 = game.getPlayer(1).choice;
+  const p2 = game.getPlayer(2).choice;
+
   return (
     <div>
-      {game.getPlayer(1).choice} {game.getPlayer(2).choice}
+      {(p1 >= 0) ? game.getValue(p1) : "none"} {(p2 >= 0) ? game.getValue(p2) : "none"}
       {winner && (
         <div>
           <p>Winner: {winner.name}</p>
