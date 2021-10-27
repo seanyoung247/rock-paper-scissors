@@ -11,6 +11,7 @@ class Game {
       { id: 1, name: "You", score: 0, choice: -1 },
       { id: 2, name: "The House", score: 0, choice: -1}
     ];
+    this._winner = null;
   }
 
   // Getter and Setters
@@ -48,6 +49,14 @@ class Game {
       return this._players[player-1];
     }
     return null;
+  }
+
+  /**
+   * Returns the winner of the current round
+   *  @returns {Object}
+   */
+  get winner() {
+    return this._winner;
   }
 
   // Helper functions
@@ -121,10 +130,9 @@ class Game {
   }
 
   /**
-   * Returns the winning player object
-   *  @returns {Object}
+   * Scores the game and sets the winner
    */
-  getWinner() {
+  scoreGame() {
     if (this._allPlayersHavePicked()) {
       const winner = this._checkWinner(
         this._players[0].choice,
@@ -132,12 +140,11 @@ class Game {
       );
       if (winner) {
         this._players[winner-1].score++;
-        return this._players[winner-1];
+        this._winner = this._players[winner-1];
       } else {
-        return { id: 0, name: "Tie", score: -1, choice: -1}
+        this._winner = { id: 0, name: "Tie", score: -1, choice: -1}
       }
     }
-    return null;
   }
 
   /**
@@ -147,6 +154,7 @@ class Game {
     for (let i=0; i<this._players.length; i++) {
       this._players[i].choice = -1;
     }
+    this._winner = null;
   }
 
   /**
@@ -157,6 +165,7 @@ class Game {
       this._players[i].choice = -1;
       this._players[i].score = 0;
     }
+    this._winner = null;
   }
 }
 
