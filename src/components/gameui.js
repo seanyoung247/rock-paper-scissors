@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
+import Game from '../logic/game.js';
 
 import Button from './button.js';
 
 class GameUI extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      step: 1
+    }
     this.steps = [
       ()=>this.stepOne(),
       ()=>this.stepTwo(),
       ()=>this.stepThree()
     ];
+    this.game = new Game();
   }
+  
+  setStep(step) {
+    this.setState({step: step});
+  }
+  
   stepOne() {
     return (
       <div>
@@ -41,6 +51,7 @@ class GameUI extends Component {
       </div>
     );
   }
+  
   render() {
     return this.steps[this.props.step-1]();
   }
