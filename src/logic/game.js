@@ -104,10 +104,10 @@ class Game {
    *  @returns 0 if tie, 1 if player 1, 2 if player 2
    */
   _checkWinner(p1, p2) {
-    // Works by splitting the list of options in half using choice one as the
-    // pivot and wrapping at the ends. If choice two is in the "high" half it
-    // wins, if it is in the low half it loses. Correct choice array order is
-    // required for correct response.
+    // This works by splitting the list of options in half using the first
+    // choice as the pivot and wrapping at the ends. If the second choice
+    // is in the "high" half it wins, if it is in the low half it loses.
+    // Correct choice array order is required for correct response.
     const mod = (a, b, c = a % b) => (c < 0) ? c + b : c;
     const count = this._choices.length;
 
