@@ -115,8 +115,8 @@ class Game {
    *  @param {number} choice - Choice id
    */
   setPlayerChoice(player, choice) {
-    if (this.isValidChoice(choice) && this.isValidPlayer(player)) {
-      this._players[player].choice = choice;
+    if (this.isValidChoice(choice) && this.isValidPlayer(player-1)) {
+      this._players[player-1].choice = choice;
     }
   }
 
