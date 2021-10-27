@@ -6,10 +6,12 @@ class Chooser extends Component {
   render() {
     return (
       <div>
-        <p>step one</p>
-        <Button onClick={()=>this.props.setStep(1)}>
-          Next step
-        </Button>
+        {this.props.choices.map((data, index)=>(
+          <Button key={index}
+            onClick={()=>this.props.choose(this.props.player, index)}>
+            {data}
+          </Button>
+        ))}
       </div>
     );
   }
