@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 
 function Chooser(props) {
   return (
