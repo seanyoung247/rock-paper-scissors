@@ -23,13 +23,22 @@ class GamePanel extends Component {
     }));
   }
 
+  stepOne() {
+    return (
+      <div>
+        {this.game.choices.map((data, index)=>(
+          <Button key={index} title={data} onClick={this.nextStep} />
+        ))}
+      </div>
+    );
+  }
   stepTwo() {}
   stepThree() {}
 
   render() {
     return (
       <div id='gamePanel'>
-        {this.game.choices.map((data, index)=>(<p key={index}>{data}</p>))}
+        {this.state.step === 1 ? this.stepOne() : this.stepTwo()}
       </div>
     );
   }
