@@ -12,7 +12,7 @@ class GameUI extends Component {
     this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
-        setup: ()=>this.game.resetGame(),
+        setup: ()=>this.game.newRound(),
         render: ()=>
           <Chooser choices={this.game.choices} player={1} choose={this.setChoice} />
       },
@@ -29,7 +29,10 @@ class GameUI extends Component {
         render: ()=><Display game={this.game} />
       },
       {
-        setup: ()=>this.game.scoreGame(),
+        setup: ()=>{
+          this.game.scoreGame();
+          this.props.setScore(this.game.getPlayer(1).score);
+        },
         render: ()=><Display game={this.game} reset={()=>this.setStep(0)} />
       }
     ];
