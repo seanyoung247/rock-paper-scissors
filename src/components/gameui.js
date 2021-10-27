@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from './button.js';
+
 class GameUI extends Component {
   constructor(props) {
     super(props);
@@ -10,16 +12,36 @@ class GameUI extends Component {
     ];
   }
   stepOne() {
-    return (<p>step one</p>);
+    return (
+      <div>
+        <p>step one</p>
+        <Button onClick={()=>this.props.setStep(2)}>
+          Next step
+        </Button>
+      </div>
+    );
   }
   stepTwo() {
-    return (<p>step two</p>);
+    return (
+      <div>
+        <p>step two</p>
+        <Button onClick={()=>this.props.setStep(3)}>
+          Next step
+        </Button>
+      </div>
+    );
   }
   stepThree() {
-    return (<p>step three</p>);
+    return (
+      <div>
+        <p>step three</p>
+        <Button onClick={()=>this.props.setStep(1)}>
+          Restart
+        </Button>
+      </div>
+    );
   }
   render() {
-    console.log(this.props.step);
     return this.steps[this.props.step-1]();
   }
 }
