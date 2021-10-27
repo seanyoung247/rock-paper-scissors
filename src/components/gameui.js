@@ -13,10 +13,10 @@ class GameUI extends Component {
     this.steps = [
       {
         setup: ()=>this.game.newRound(),
-        render: ()=>{
+        render: ()=>(
           <Chooser choices={this.game.choices}
                     player={1} choose={this.setChoice} />
-        }
+        )
       },
       {
         setup: ()=>setTimeout(()=>this.setStep(2), 1000),
