@@ -6,20 +6,20 @@ import Button from './button.js';
 class GameUI extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      step: 1
-    }
-    this.steps = [
-      ()=>this.stepOne(),
-      ()=>this.stepTwo(),
-      ()=>this.stepThree(),
-      ()=>this.stepFour()
-    ];
+    this.state = {step: 0};
     this.game = new Game();
+    this.steps = [
+      {setup: null, render: ()=>this.stepOne()},
+      {setup: null, render: ()=>this.stepTwo()},
+      {setup: null, render: ()=>this.stepThree()},
+      {setup: null, render: ()=>this.stepFour()}
+    ];
   }
   
   setStep(step) {
     this.setState({step: step});
+    // Do actions for next step here
+    
   }
   
   // Player choice
@@ -27,7 +27,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step one</p>
-        <Button onClick={()=>this.setStep(2)}>
+        <Button onClick={()=>this.setStep(1)}>
           Next step
         </Button>
       </div>
@@ -38,7 +38,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step two</p>
-        <Button onClick={()=>this.setStep(3)}>
+        <Button onClick={()=>this.setStep(2)}>
           Next step
         </Button>
       </div>
@@ -49,7 +49,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step three</p>
-        <Button onClick={()=>this.setStep(4)}>
+        <Button onClick={()=>this.setStep(3)}>
           Next step
         </Button>
       </div>
@@ -60,7 +60,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step four</p>
-        <Button onClick={()=>this.setStep(1)}>
+        <Button onClick={()=>this.setStep(0)}>
           Restart
         </Button>
       </div>
@@ -68,7 +68,7 @@ class GameUI extends Component {
   }
   
   render() {
-    return this.steps[this.state.step-1]();
+    return this.steps[this.state.step].render();
   }
 }
 
