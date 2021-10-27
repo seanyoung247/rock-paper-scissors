@@ -9,7 +9,7 @@ class GamePanel extends Component {
   render() {
     return (
       <div id='gamePanel'>
-        <GameUI step={this.state.step} />
+        <GameUI />
       </div>
     );
   }
