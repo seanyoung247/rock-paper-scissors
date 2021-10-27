@@ -10,11 +10,12 @@ class GameUI extends Component {
     this.state = {step: 0};
     this.game = new Game();
     this.setStep = this.setStep.bind(this);
+    this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
-        setup: null, // new round
-        render: ()=>(
-          <Chooser choices={this.game.choices} setStep={this.setStep} />)
+        setup: ()=>this.game.resetGame, // new round
+        render: ()=>
+          <Chooser choices={this.game.choices} player={1} choose={this.setChoice} />
       },
       {
         setup: null, // step timer
@@ -34,20 +35,14 @@ class GameUI extends Component {
   setStep(step) {
     this.setState({step: step});
     // Do actions for next step here
-
   }
 
-  // Player choice
-  stepOne() {
-    return (
-      <div>
-        <p>step one</p>
-        <Button onClick={()=>this.setStep(1)}>
-          Next step
-        </Button>
-      </div>
-    );
+  setChoice(player, choice) {
+    console.log(this.game.getPlayer(player).name + " chose " + this.game.getValue(choice));
+    this.game.setPlayerChoice(player, choice);
+    this.setStep(this.state.step + 1);
   }
+
   // Display player choice
   stepTwo() {
     return (
