@@ -1,5 +1,5 @@
 const basic = ["rock", "paper", "scissors"];
-const bonus = ["rock", "spock", "paper", "lizard", "scissors"];
+//const bonus = ["rock", "spock", "paper", "lizard", "scissors"];
 
 /**
  * Game class performs logic functions for the rock paper scissors game
