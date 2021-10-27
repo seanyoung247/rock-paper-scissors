@@ -25,3 +25,15 @@ class GameUI extends Component {
 }
 
 export default GameUI;
+
+// stepOne() {
+//   return (
+//     <div>
+//       {this.game.choices.map((data, index)=>(
+//         <Button key={index} onClick={this.nextStep}>
+//           {data}
+//         </Button>
+//       ))}
+//     </div>
+//   );
+// }
