@@ -12,7 +12,8 @@ class GameUI extends Component {
     this.steps = [
       ()=>this.stepOne(),
       ()=>this.stepTwo(),
-      ()=>this.stepThree()
+      ()=>this.stepThree(),
+      ()=>this.stepFour()
     ];
     this.game = new Game();
   }
@@ -21,6 +22,7 @@ class GameUI extends Component {
     this.setState({step: step});
   }
   
+  // Player choice
   stepOne() {
     return (
       <div>
@@ -31,6 +33,7 @@ class GameUI extends Component {
       </div>
     );
   }
+  // Display player choice
   stepTwo() {
     return (
       <div>
@@ -41,10 +44,22 @@ class GameUI extends Component {
       </div>
     );
   }
+  // Display computer choice
   stepThree() {
     return (
       <div>
         <p>step three</p>
+        <Button onClick={()=>this.props.setStep(4)}>
+          Next step
+        </Button>
+      </div>
+    );
+  }
+  // Display winner
+  stepFour() {
+    return (
+      <div>
+        <p>step four</p>
         <Button onClick={()=>this.props.setStep(1)}>
           Restart
         </Button>
