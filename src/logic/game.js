@@ -12,7 +12,7 @@ class Game {
       { id: 2, name: "The House", score: 0, choice: -1}
     ];
   }
-  
+
   // Getter and Setters
 
   /**
@@ -38,18 +38,18 @@ class Game {
   get choices() {
     return this._choices;
   }
-  
+
   /**
    * Returns the player object for given player id
    *  @param {number} player - the player id number
    */
   getPlayer(player) {
-    if (this.isValidPlayer(player)) {
-      return this._players
+    if (this.isValidPlayer(player-1)) {
+      return this._players[player-1];
     }
     return null;
   }
-  
+
   // Helper functions
 
   /**
@@ -67,7 +67,7 @@ class Game {
   isValidChoice(choice) {
     return (choice >= 0 && choice < this._choices.length);
   }
-  
+
   /**
    * Returns true if the given player is valid
    *  @param {number} player - numeric index of player
@@ -76,7 +76,7 @@ class Game {
   isValidPlayer(player) {
     return (player >= 0 && player < this._players.length);
   }
-  
+
   /**
    * Returns true if all players have picked a choice
    *  @returns {boolean}
@@ -106,9 +106,9 @@ class Game {
     if (mod(p1 - p2, count) < count / 2) return 1;  // Player one wins
     else return 2;                                  // Player two wins
   }
-  
+
   // Game State handling
-  
+
   /**
    * Sets a given player's choice
    *  @param {number} player - Player id
@@ -119,7 +119,7 @@ class Game {
       this._players[player].choice = choice;
     }
   }
-  
+
   /**
    * Returns the winning player object
    *  @returns {Object}
@@ -139,7 +139,7 @@ class Game {
     }
     return null;
   }
-  
+
   /**
    * Sets game state to round start
    */
@@ -148,7 +148,7 @@ class Game {
       this._players[i].choice = -1;
     }
   }
-  
+
   /**
    * Resets the game
    */
