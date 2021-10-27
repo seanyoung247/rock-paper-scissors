@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Game from '../logic/game.js';
 
 import './gamepanel.css';
 
-import Game from '../logic/game.js';
+import Button from '../components/button.js';
 
 class GamePanel extends Component {
   constructor(props) {
@@ -13,9 +14,15 @@ class GamePanel extends Component {
       player2: -1
     };
     this.game = new Game();
+    this.nextStep = this.nextStep.bind(this);
   }
 
-  stepOne() {}
+  nextStep() {
+    this.setState((state, props)=>({
+      step: state.step+1
+    }));
+  }
+
   stepTwo() {}
   stepThree() {}
 
