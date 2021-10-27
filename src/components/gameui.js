@@ -27,7 +27,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step one</p>
-        <Button onClick={()=>this.props.setStep(2)}>
+        <Button onClick={()=>this.setStep(2)}>
           Next step
         </Button>
       </div>
@@ -38,7 +38,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step two</p>
-        <Button onClick={()=>this.props.setStep(3)}>
+        <Button onClick={()=>this.setStep(3)}>
           Next step
         </Button>
       </div>
@@ -49,7 +49,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step three</p>
-        <Button onClick={()=>this.props.setStep(4)}>
+        <Button onClick={()=>this.setStep(4)}>
           Next step
         </Button>
       </div>
@@ -60,7 +60,7 @@ class GameUI extends Component {
     return (
       <div>
         <p>step four</p>
-        <Button onClick={()=>this.props.setStep(1)}>
+        <Button onClick={()=>this.setStep(1)}>
           Restart
         </Button>
       </div>
@@ -68,7 +68,7 @@ class GameUI extends Component {
   }
   
   render() {
-    return this.steps[this.props.step-1]();
+    return this.steps[this.state.step-1]();
   }
 }
 
