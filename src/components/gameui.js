@@ -53,21 +53,6 @@ class GameUI extends Component {
     this.setStep(this.state.step + 1);
   }
 
-  getChoice() {}
-
-  setTimer() {}
-
-  // Display computer choice
-  stepThree() {
-    return (
-      <div>
-        <p>step three</p>
-        <Button onClick={()=>this.setStep(3)}>
-          Next step
-        </Button>
-      </div>
-    );
-  }
   // Display winner
   stepFour() {
     return (
