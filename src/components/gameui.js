@@ -4,6 +4,8 @@ import Game from '../logic/game.js';
 import Button from './button.js';
 
 import Chooser from './chooser.js';
+import Display from './display.js';
+
 class GameUI extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +21,10 @@ class GameUI extends Component {
       },
       {
         setup: null, // step timer
-        render: ()=>this.stepTwo()
+        render: ()=>
+          <Display
+            player1={this.game.getPlayer(1).choice}
+            player2={this.game.getPlayer(2).choice} />
       },
       {
         setup: null, // computer choice, step timer
