@@ -32,8 +32,8 @@ class GameUI extends Component {
         render: ()=><Display game={this.game} />
       },
       {
-        setup: ()=>console.log("Step Four"), // check winner
-        render: ()=>this.stepFour()
+        setup: ()=>this.game.scoreGame(),
+        render: ()=><Display game={this.game} reset={()=>this.setStep(0)} />
       }
     ];
   }
