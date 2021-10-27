@@ -3,6 +3,7 @@ import Game from '../logic/game.js';
 
 import Button from './button.js';
 
+import Chooser from './chooser.js';
 class GameUI extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +12,7 @@ class GameUI extends Component {
     this.steps = [
       {
         setup: null, // new round
-        render: ()=>this.stepOne()
+        render: ()=>(<Chooser choices={this.game.choices} />)
       },
       {
         setup: null, // step timer
