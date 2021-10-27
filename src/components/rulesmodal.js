@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
 import Modal from './modal.js';
-import Button from './button.js';
 
 import './rulesmodal.css';
 import closeIcon from '../images/icon-close.svg';
@@ -23,9 +22,9 @@ class RulesModal extends Component {
   render() {
     return (
       <Fragment>
-        <Button className="modal-trigger" onClick={this.toggleShow}>
+        <button className="modal-trigger" onClick={this.toggleShow}>
           Rules
-        </Button>
+        </button>
         <Modal show={this.state.show}>
           <h2 className="rules-title">Rules</h2>
           <img
@@ -33,9 +32,9 @@ class RulesModal extends Component {
             src={rulesImage}
             alt="Paper beats Rock beats Scissors beats Paper"
           />
-          <Button className="modal-close rules-close" onClick={this.toggleShow}>
+          <button className="modal-close rules-close" onClick={this.toggleShow}>
             <img src={closeIcon} alt="Close" />
-          </Button>
+          </button>
         </Modal>
       </Fragment>
     );

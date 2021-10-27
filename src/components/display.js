@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './button.js';
 
 class Display extends Component {
   render() {
@@ -11,9 +10,9 @@ class Display extends Component {
         {winner && (
           <div>
             <p>Winner: {winner.name}</p>
-            <Button onClick={this.props.reset}>
+            <button onClick={this.props.reset}>
               Play Again
-            </Button>
+            </button>
           </div>
         )}
       </div>
