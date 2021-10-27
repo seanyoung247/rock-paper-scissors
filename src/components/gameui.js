@@ -9,10 +9,12 @@ class GameUI extends Component {
     super(props);
     this.state = {step: 0};
     this.game = new Game();
+    this.setStep = this.setStep.bind(this);
     this.steps = [
       {
         setup: null, // new round
-        render: ()=>(<Chooser choices={this.game.choices} />)
+        render: ()=>(
+          <Chooser choices={this.game.choices} setStep={this.setStep} />)
       },
       {
         setup: null, // step timer
