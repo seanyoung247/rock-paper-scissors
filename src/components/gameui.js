@@ -51,17 +51,6 @@ class GameUI extends Component {
 
   setTimer() {}
 
-  // Display player choice
-  stepTwo() {
-    return (
-      <div>
-        <p>step two</p>
-        <Button onClick={()=>this.setStep(2)}>
-          Next step
-        </Button>
-      </div>
-    );
-  }
   // Display computer choice
   stepThree() {
     return (
