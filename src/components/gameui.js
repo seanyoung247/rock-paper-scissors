@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Game from '../logic/game.js';
 
-import Button from './button.js';
-
 import Chooser from './chooser.js';
 import Display from './display.js';
 
@@ -11,7 +9,6 @@ class GameUI extends Component {
     super(props);
     this.state = {step: 0};
     this.game = new Game();
-    this.setStep = this.setStep.bind(this);
     this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
@@ -48,20 +45,7 @@ class GameUI extends Component {
     this.setStep(this.state.step + 1);
   }
 
-  // Display winner
-  stepFour() {
-    return (
-      <div>
-        <p>step four</p>
-        <Button onClick={()=>this.setStep(0)}>
-          Restart
-        </Button>
-      </div>
-    );
-  }
-
   render() {
-    console.log(this.game.getPlayer(2).choice);
     return this.steps[this.state.step].render();
   }
 }
