@@ -15,19 +15,17 @@ class GamePanel extends Component {
       player2: -1
     };
     this.game = new Game();
-    this.nextStep = this.nextStep.bind(this);
+    this.setStep = this.setStep.bind(this);
   }
 
-  nextStep() {
-    this.setState((state, props)=>({
-      step: state.step+1
-    }));
+  setStep(step) {
+    this.setState({step: step});
   }
 
   render() {
     return (
       <div id='gamePanel'>
-        <GameUI step={this.state.step} />
+        <GameUI step={this.state.step} setStep={this.setStep}/>
       </div>
     );
   }
