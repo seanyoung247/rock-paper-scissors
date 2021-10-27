@@ -8,8 +8,8 @@ class Game {
   constructor() {
     this._choices = basic;
     this._players = [
-      { id: 1, name: "You", choice: -1 },
-      { id: 2, name: "The House", choice: -1}
+      { id: 1, name: "You", score: 0, choice: -1 },
+      { id: 2, name: "The House", score: 0, choice: -1}
     ];
   }
   
@@ -131,20 +131,31 @@ class Game {
         this._players[1].choice
       );
       if (winner) {
+        this._players[winner-1].score++;
         return this._players[winner-1];
       } else {
-        return { id: 0, name: "Tie", choice: -1}
+        return { id: 0, name: "Tie", score: -1, choice: -1}
       }
     }
     return null;
   }
   
   /**
-   * Resets the game logic state
+   * Sets game state to round start
+   */
+  newRound() {
+    for (let i=0; i<this._players.length; i++) {
+      this._players[i].choice = -1;
+    }
+  }
+  
+  /**
+   * Resets the game
    */
   resetGame() {
     for (let i=0; i<this._players.length; i++) {
       this._players[i].choice = -1;
+      this._players[i].score = 0;
     }
   }
 }
