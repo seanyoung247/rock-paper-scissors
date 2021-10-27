@@ -12,8 +12,9 @@ class Game {
     this._mode = mode;
     this._choices = choices[this._mode];
     this._players = [
-      { id: 1, name: "You", score: 0, choice: -1 },
-      { id: 2, name: "The House", score: 0, choice: -1}
+      { name: "Tie", score: 0, choice: -1 },
+      { name: "You", score: 0, choice: -1 },
+      { name: "The House", score: 0, choice: -1}
     ];
     this._winner = null;
   }
@@ -69,8 +70,8 @@ class Game {
    *  @param {number} player - the player id number
    */
   getPlayer(player) {
-    if (this.isValidPlayer(player-1)) {
-      return this._players[player-1];
+    if (this.isValidPlayer(player)) {
+      return this._players[player];
     }
     return null;
   }
@@ -107,7 +108,8 @@ class Game {
    *  @returns {boolean}
    */
   isValidPlayer(player) {
-    return (player >= 0 && player < this._players.length);
+    // Player 0 is "Tie", so not a valid player
+    return (player > 0 && player < this._players.length);
   }
 
   /**
@@ -115,7 +117,7 @@ class Game {
    *  @returns {boolean}
    */
   _allPlayersHavePicked() {
-    for (let i=0; i<this._players.length; i++) {
+    for (let i=1; i<this._players.length; i++) {
       if (!this.isValidChoice(this._players[i].choice)) return false;
     }
     return true;
@@ -148,8 +150,8 @@ class Game {
    *  @param {number} choice - Choice id
    */
   setPlayerChoice(player, choice) {
-    if (this.isValidChoice(choice) && this.isValidPlayer(player-1)) {
-      this._players[player-1].choice = choice;
+    if (this.isValidChoice(choice) && this.isValidPlayer(player)) {
+      this._players[player].choice = choice;
     }
   }
 
@@ -159,15 +161,11 @@ class Game {
   scoreGame() {
     if (this._allPlayersHavePicked()) {
       const winner = this._checkWinner(
-        this._players[0].choice,
-        this._players[1].choice
+        this._players[1].choice,
+        this._players[2].choice
       );
-      if (winner) {
-        this._players[winner-1].score++;
-        this._winner = this._players[winner-1];
-      } else {
-        this._winner = { id: 0, name: "Tie", score: -1, choice: -1}
-      }
+      this._players[winner].score++;
+      this._winner = this._players[winner];
     }
   }
 
