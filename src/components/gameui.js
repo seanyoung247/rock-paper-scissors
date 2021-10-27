@@ -15,20 +15,26 @@ class GameUI extends Component {
     this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
-        setup: ()=>this.game.resetGame, // new round
+        setup: ()=>this.game.resetGame(),
         render: ()=>
           <Chooser choices={this.game.choices} player={1} choose={this.setChoice} />
       },
       {
-        setup: ()=>setTimeout(()=>this.setStep(2), 1000), // step timer
+        setup: ()=>setTimeout(()=>this.setStep(2), 1000),
         render: ()=>
           <Display
             player1={this.game.getPlayer(1).choice}
             player2={this.game.getPlayer(2).choice} />
       },
       {
-        setup: ()=>setTimeout(()=>this.setStep(3), 1000), // computer choice, step timer
-        render: ()=>this.stepThree()
+        setup: ()=>{
+          this.game.setPlayerChoice(2, this.game.randomChoice());
+          setTimeout(()=>this.setStep(3), 1000);
+        },
+        render: ()=>
+          <Display
+            player1={this.game.getPlayer(1).choice}
+            player2={this.game.getPlayer(2).choice} />
       },
       {
         setup: ()=>console.log("Step Four"), // check winner
@@ -38,9 +44,8 @@ class GameUI extends Component {
   }
 
   setStep(step) {
-    this.setState({step: step});
-    // Do actions for next step here
     this.steps[step].setup();
+    this.setState({step: step});
   }
 
   setChoice(player, choice) {
@@ -76,6 +81,7 @@ class GameUI extends Component {
   }
 
   render() {
+    console.log(this.game.getPlayer(2).choice);
     return this.steps[this.state.step].render();
   }
 }
