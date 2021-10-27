@@ -62,9 +62,9 @@ class Game {
     const mod = (a, b, c = a % b) => (c < 0) ? c + b : c;
     const count = this._choices.length;
 
-    if (p1 === p2) return 0;
-    if (mod(p1 - p2, count) < count / 2) return 1;
-    else return 2;
+    if (p1 === p2) return 0;                        // Tie
+    if (mod(p1 - p2, count) < count / 2) return 1;  // Player one wins
+    else return 2;                                  // Player two wins
   }
 }
 
