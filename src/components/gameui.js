@@ -9,19 +9,31 @@ class GameUI extends Component {
     this.state = {step: 0};
     this.game = new Game();
     this.steps = [
-      {setup: null, render: ()=>this.stepOne()},
-      {setup: null, render: ()=>this.stepTwo()},
-      {setup: null, render: ()=>this.stepThree()},
-      {setup: null, render: ()=>this.stepFour()}
+      {
+        setup: null, // new round
+        render: ()=>this.stepOne()
+      },
+      {
+        setup: null, // step timer
+        render: ()=>this.stepTwo()
+      },
+      {
+        setup: null, // computer choice, step timer
+        render: ()=>this.stepThree()
+      },
+      {
+        setup: null, // check winner
+        render: ()=>this.stepFour()
+      }
     ];
   }
-  
+
   setStep(step) {
     this.setState({step: step});
     // Do actions for next step here
-    
+
   }
-  
+
   // Player choice
   stepOne() {
     return (
@@ -66,7 +78,7 @@ class GameUI extends Component {
       </div>
     );
   }
-  
+
   render() {
     return this.steps[this.state.step].render();
   }
