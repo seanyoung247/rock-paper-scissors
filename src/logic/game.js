@@ -1,12 +1,16 @@
-const basic = ["rock", "paper", "scissors"];
-//const bonus = ["rock", "spock", "paper", "lizard", "scissors"];
+const choices = {
+  basic: ["rock", "paper", "scissors"],
+  spock: ["rock", "spock", "paper", "lizard", "scissors"]
+};
+Object.freeze(choices);
 
 /**
  * Game class performs logic functions for the rock paper scissors game
  */
 class Game {
-  constructor() {
-    this._choices = basic;
+  constructor(mode="basic") {
+    this._mode = mode;
+    this._choices = choices[this._mode];
     this._players = [
       { id: 1, name: "You", score: 0, choice: -1 },
       { id: 2, name: "The House", score: 0, choice: -1}
@@ -38,6 +42,26 @@ class Game {
    */
   get choices() {
     return this._choices;
+  }
+
+  /**
+   * Returns the current game mode
+   *  @returns {string} "basic" or "spock"
+   */
+  get mode() {
+    return this._mode;
+  }
+
+  /**
+   * Sets the game mode and resets the game
+   *  @param {string} val - The mode to set: "basic" or "spock"
+   */
+  set mode(val) {
+    const newMode = choices[val];
+    if (newMode) {
+      this._mode = val;
+      this._choices = newMode;
+    }
   }
 
   /**
