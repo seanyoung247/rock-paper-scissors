@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 class GameUI extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class GameUI extends Component {
   }
   render() {
     console.log(this.props.step);
-    return this.steps[this.props.step]();
+    return this.steps[this.props.step-1]();
   }
 }
 

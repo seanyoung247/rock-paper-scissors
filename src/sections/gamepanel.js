@@ -24,20 +24,6 @@ class GamePanel extends Component {
     }));
   }
 
-  stepOne() {
-    return (
-      <div>
-        {this.game.choices.map((data, index)=>(
-          <Button key={index} onClick={this.nextStep}>
-            {data}
-          </Button>
-        ))}
-      </div>
-    );
-  }
-  stepTwo() {}
-  stepThree() {}
-
   render() {
     return (
       <div id='gamePanel'>
