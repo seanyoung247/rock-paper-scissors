@@ -3,6 +3,7 @@ import Game from '../logic/game.js';
 
 import './gamepanel.css';
 
+import GameUI from '../components/gameui.js';
 import Button from '../components/button.js';
 
 class GamePanel extends Component {
@@ -40,7 +41,7 @@ class GamePanel extends Component {
   render() {
     return (
       <div id='gamePanel'>
-        {this.state.step === 1 ? this.stepOne() : this.stepTwo()}
+        <GameUI step={this.state.step} />
       </div>
     );
   }

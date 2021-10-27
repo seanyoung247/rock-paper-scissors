@@ -19,6 +19,9 @@ class GameUI extends Component {
     return (<p>step three</p>);
   }
   render() {
-    return this.steps[this.props.step];
+    console.log(this.props.step);
+    return this.steps[this.props.step]();
   }
 }
+
+export default GameUI;
