@@ -14,13 +14,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {score: 0};
-    this.incScore = this.incScore.bind(this);
+    this.setScore = this.setScore.bind(this);
   }
 
-  incScore(inc = 1) {
-    this.setState((state, props)=>({
-      score: state.score + inc
-    }));
+  setScore(score) {
+    this.setState({score: score});
   }
 
   render() {
@@ -30,7 +28,7 @@ class App extends React.Component {
           <Score score={this.state.score} />
         </Header>
         <section>
-          <GamePanel incScore={this.incScore} />
+          <GamePanel setScore={this.setScore} />
         </section>
         <footer>
           <RulesModal show={false} />
