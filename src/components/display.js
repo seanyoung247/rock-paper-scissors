@@ -5,3 +5,5 @@ class Display extends Component {
     return (<p>Placeholder</p>);
   }
 }
+
+export default Display;

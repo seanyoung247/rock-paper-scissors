@@ -5,3 +5,5 @@ class Chooser extends Component {
     return (<p>Placeholder</p>);
   }
 }
+
+export default Chooser;
