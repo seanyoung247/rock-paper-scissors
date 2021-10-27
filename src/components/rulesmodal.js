@@ -23,10 +23,9 @@ class RulesModal extends Component {
   render() {
     return (
       <Fragment>
-        <Button
-          title="Rules"
-          className="modal-trigger"
-          onClick={this.toggleShow} />
+        <Button className="modal-trigger" onClick={this.toggleShow}>
+          Rules
+        </Button>
         <Modal show={this.state.show}>
           <h2 className="rules-title">Rules</h2>
           <img
@@ -34,10 +33,9 @@ class RulesModal extends Component {
             src={rulesImage}
             alt="Paper beats Rock beats Scissors beats Paper"
           />
-          <Button
-            title={<img src={closeIcon} alt="Close" />}
-            className="modal-close rules-close"
-            onClick={this.toggleShow} />
+          <Button className="modal-close rules-close" onClick={this.toggleShow}>
+            <img src={closeIcon} alt="Close" />
+          </Button>
         </Modal>
       </Fragment>
     );

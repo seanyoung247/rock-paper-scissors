@@ -27,7 +27,9 @@ class GamePanel extends Component {
     return (
       <div>
         {this.game.choices.map((data, index)=>(
-          <Button key={index} title={data} onClick={this.nextStep} />
+          <Button key={index} onClick={this.nextStep}>
+            {data}
+          </Button>
         ))}
       </div>
     );
