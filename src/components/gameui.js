@@ -21,20 +21,15 @@ class GameUI extends Component {
       },
       {
         setup: ()=>setTimeout(()=>this.setStep(2), 1000),
-        render: ()=>
-          <Display
-            player1={this.game.getPlayer(1).choice}
-            player2={this.game.getPlayer(2).choice} />
+        render: ()=><Display game={this.game} />
       },
       {
         setup: ()=>{
-          this.game.setPlayerChoice(2, this.game.randomChoice());
+          const choice = this.game.randomChoice();
+          this.game.setPlayerChoice(2, choice);
           setTimeout(()=>this.setStep(3), 1000);
         },
-        render: ()=>
-          <Display
-            player1={this.game.getPlayer(1).choice}
-            player2={this.game.getPlayer(2).choice} />
+        render: ()=><Display game={this.game} />
       },
       {
         setup: ()=>console.log("Step Four"), // check winner
