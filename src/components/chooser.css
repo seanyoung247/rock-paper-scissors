@@ -1,11 +1,16 @@
+.chooser {
+  --diameter: 350px;
+  --radius: calc(var(--diameter) / 2);
+}
+
 .chooser ul {
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
   
-  width: 350px;
-  height: 350px;
+  width: var(--diameter);
+  height: var(--diameter);
 }
 
 .chooser li {
@@ -23,6 +28,6 @@
   transform:
     translate(-50%, -50%)       /* Move item to center */
     rotate(var(--a))            /* Rotate to align with required position */
-    translate(150px)            /* Move to circle boundary */
+    translate(var(--radius))    /* Move to circle boundary */
     rotate(calc(-1*var(--a)));  /* Realign rotation with page */
 }
