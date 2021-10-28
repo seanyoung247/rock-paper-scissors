@@ -197,6 +197,9 @@ class Game {
     }
     this._winner = null;
   }
+
+  // ToDo: local storage save/load state
+  
 }
 
 export default Game;
