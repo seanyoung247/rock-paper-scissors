@@ -23,7 +23,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
   width: var(--diameter);
   height: var(--diameter);
 }
@@ -32,19 +32,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   /*
     --s = angle offset
     --a = item angle
   */
-  --s: calc(0.25 * (1 / var(--n)));
+  --s: calc(0.75 * (1 / var(--n)));
   --a: calc((var(--s) * 1turn) + var(--i) * (1turn / var(--n)));
-  
+
   transform:
-    translate(-50%, -50%)       /* Move item to center */
-    rotate(var(--a))            /* Rotate to align with required position */
-    translate(var(--radius))    /* Move to circle boundary */
-    rotate(calc(-1*var(--a)));  /* Realign rotation with page */
+    translate(-50%, -50%)         /* Move item to center */
+    rotate(var(--a))              /* Rotate to align with required position */
+    translate(var(--offset))      /* Move to circle boundary */
+    rotate(calc(-1 * var(--a)));  /* Realign rotation with page */
+}
 
 .choice-icon {
   /* display: none; */
