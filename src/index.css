@@ -30,6 +30,7 @@ html {
 
   font-family: 'Barlow Semi Condensed', sans-serif;
 
+  min-width: var(--mobile-width);
   min-height: 100vh;
   color: var(--light-color);
 }
