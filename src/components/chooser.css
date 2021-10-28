@@ -1,6 +1,12 @@
 .chooser {
-  --diameter: 350px;
-  --radius: calc(var(--diameter) / 2);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  --diameter: 350px; /*450px;*/
+  --item-size: 130px; /*200px;*/
+  --offset: calc((var(--diameter) - var(--item-size)) / 2);
+}
 }
 
 .chooser ul {
