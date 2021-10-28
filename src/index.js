@@ -13,12 +13,20 @@ import RulesModal from './components/rulesmodal.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {score: 0};
+    this.state = {
+      score: 0,
+      opponent: 0,
+      tie: 0
+    };
     this.setScore = this.setScore.bind(this);
   }
 
-  setScore(score) {
-    this.setState({score: score});
+  setScore(score, opponent=0, tie=0) {
+    this.setState({
+      score: score,
+      opponent: opponent,
+      tie: tie
+    });
   }
 
   render() {
