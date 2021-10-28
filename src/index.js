@@ -7,7 +7,7 @@ import logo from './images/logo.svg';
 
 import Header from './sections/header.js';
 import Score from './components/score.js';
-import GamePanel from './sections/gamepanel.js';
+import GameUI from './components/gameui.js';
 import RulesModal from './components/rulesmodal.js';
 
 class App extends React.Component {
@@ -36,8 +36,8 @@ class App extends React.Component {
           <Score score={this.state.score}
             opponent={this.state.opponent} ties={this.state.ties} />
         </Header>
-        <section>
-          <GamePanel setScore={this.setScore} />
+        <section className="gamePanel">
+          <GameUI setScore={this.props.setScore} />
         </section>
         <footer>
           <RulesModal show={false} />

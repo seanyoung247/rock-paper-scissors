@@ -51,6 +51,13 @@ body {
   height: 100%;
 }
 
+.gamePanel {
+  position: relative;
+  width: var(--mobile-content-width);
+  margin: auto;
+  flex-grow: 1;
+}
+
 footer {
   display: flex;
   justify-content: center;
