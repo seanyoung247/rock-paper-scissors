@@ -1,10 +1,10 @@
 import './chooser.css';
 
 function Chooser(props) {
-  const count = { "--n": props.choices.length };
   return (
     <div className="chooser">
-      <ul style={count}>
+      <div className="circle" />
+      <ul className="" style={{ "--n": props.choices.length }}>
         {props.choices.map((data, index)=>(
           <li key={index} style={{ "--i": index}}>
             <button
