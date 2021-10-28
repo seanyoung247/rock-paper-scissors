@@ -8,7 +8,7 @@ class GameUI extends Component {
   constructor(props) {
     super(props);
     this.state = {step: 0};
-    this.game = new Game();
+    this.game = new Game("basic");
     this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
