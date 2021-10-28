@@ -7,6 +7,15 @@
   --item-size: 130px; /*200px;*/
   --offset: calc((var(--diameter) - var(--item-size)) / 2);
 }
+.chooser > .circle {
+  position: absolute;
+  left: calc(var(--item-size) / 2);
+  top: calc(var(--item-size) / 2);
+  width: calc(var(--offset) * 2);
+  height: calc(var(--offset) * 2);
+
+  border-radius: 50%;
+  border: 15px solid #00000025;
 }
 
 .chooser ul {
