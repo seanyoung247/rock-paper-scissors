@@ -44,6 +44,9 @@ class GameUI extends Component {
     ];
   }
 
+  // ToDo: Save and recover state on mount/unmount
+  // ToDo: Mode switching
+
   setStep(step) {
     this.steps[step].setup();
     this.setState({step: step});
