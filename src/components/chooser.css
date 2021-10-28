@@ -36,4 +36,13 @@
     rotate(var(--a))            /* Rotate to align with required position */
     translate(var(--radius))    /* Move to circle boundary */
     rotate(calc(-1*var(--a)));  /* Realign rotation with page */
+
+.choice-icon {
+  /* display: none; */
+  width: var(--item-size);
+  height: var(--item-size);
+  border-radius: 50%;
+  color: black;
+  background: white;
+  border: none;
 }
