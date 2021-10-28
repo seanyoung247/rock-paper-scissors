@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       score: 0,
       opponent: 0,
-      tie: 0
+      ties: 0
     };
     this.setScore = this.setScore.bind(this);
   }
@@ -25,7 +25,7 @@ class App extends React.Component {
     this.setState({
       score: score,
       opponent: opponent,
-      tie: tie
+      ties: tie
     });
   }
 
@@ -33,7 +33,8 @@ class App extends React.Component {
     return (
       <React.StrictMode>
         <Header title={<img src={logo} alt="Rock Paper Sissors" />}>
-          <Score score={this.state.score} />
+          <Score score={this.state.score}
+            opponent={this.state.opponent} ties={this.state.ties} />
         </Header>
         <section>
           <GamePanel setScore={this.setScore} />
