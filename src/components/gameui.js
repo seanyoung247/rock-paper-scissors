@@ -36,7 +36,7 @@ class GameUI extends Component {
           this.props.setScore(
             this.game.getPlayer(1).score,   // Player 1 wins
             this.game.getPlayer(2).score,   // Player 2 wins
-            this.game.getPlayer(3).score    // Number of ties
+            this.game.ties                  // Number of ties
           );
         },
         render: ()=><Display game={this.game} reset={()=>this.setStep(0)} />

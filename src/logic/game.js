@@ -77,6 +77,14 @@ class Game {
   }
 
   /**
+   * Returns the number of ties in the current match
+   *  @returns {number}
+   */
+  get ties() {
+    return this._players[0].score;
+  }
+
+  /**
    * Returns the winner of the current round
    *  @returns {Object}
    */
