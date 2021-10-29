@@ -13,6 +13,7 @@ import RulesModal from './components/rulesmodal.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.game = new Game("basic");
     this.state = {
       score: 0,
       opponent: 0,
@@ -37,7 +38,7 @@ class App extends React.Component {
             opponent={this.state.opponent} ties={this.state.ties} />
         </Header>
         <section className="gamePanel">
-          <GameUI setScore={this.props.setScore} />
+          <GameUI game={this.game} setScore={this.setScore} />
         </section>
         <footer>
           <RulesModal show={false} />
