@@ -56,7 +56,7 @@ class App extends React.Component {
           <GameUI game={this.game} setScore={this.setScore} />
         </section>
         <footer>
-          <RulesModal show={false} />
+          <RulesModal show={false} rules={this.state.mode}/>
         </footer>
       </React.StrictMode>
     );
