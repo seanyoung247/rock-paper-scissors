@@ -25,6 +25,10 @@ class App extends React.Component {
     };
     this.setScore = this.setScore.bind(this);
   }
+  
+  componentDidMount(){
+    document.title = this.game.getGameTitle();
+  }
 
   setMode(mode) {
     if (this.game.modes.includes(mode)) {
