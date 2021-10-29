@@ -5,8 +5,8 @@ const choices = {
 Object.freeze(choices);
 
 const names = {
-  basic: "Rock-Paper-Scissors",
-  spock: "Rock, Paper, Scissors, Lizard, Spock"
+  basic: "Rock Paper Scissors",
+  spock: "Rock Paper Scissors Lizard Spock"
 };
 Object.freeze(names);
 
