@@ -4,6 +4,12 @@ const choices = {
 };
 Object.freeze(choices);
 
+const names = {
+  basic: "Rock-Paper-Scissors",
+  spock: "Rock, Paper, Scissors, Lizard, Spock"
+};
+Object.freeze(names);
+
 const modes = ['basic', 'spock'];
 Object.freeze(modes);
 
@@ -74,6 +80,14 @@ class Game {
       this._mode = val;
       this._choices = newMode;
     }
+  }
+  
+  /**
+   * Returns the name of the current game mode.
+   *  @returns {string}
+   */
+  getGameTitle() {
+    return names[this._mode];
   }
 
   /**
