@@ -2,24 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import logo from './images/logo.svg';
-//import logoBonus from './images/logo-bonus.svg';
+
+import basicLogo from './images/logo.svg';
+import spocklogo from './images/logo-bonus.svg';
 
 import Header from './sections/header.js';
 import Score from './components/score.js';
 import GameUI from './components/gameui.js';
 import RulesModal from './components/rulesmodal.js';
 
+const logo = {basic: basicLogo, spock: spocklogo};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.game = new Game("basic");
     this.state = {
+      mode: "basic",
       score: 0,
       opponent: 0,
       ties: 0
     };
     this.setScore = this.setScore.bind(this);
+  }
+
+  setMode(mode) {
+    if (this.game.modes.includes(mode)) {
+      this.setState({mode: mode});
+    }
   }
 
   setScore(score, opponent=0, tie=0) {
@@ -33,7 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header title={<img src={logo} alt="Rock Paper Sissors" />}>
+        <Header title={<img src={logo[this.state.mode]} alt="Rock Paper Sissors" />}>
           <Score score={this.state.score}
             opponent={this.state.opponent} ties={this.state.ties} />
         </Header>
