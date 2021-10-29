@@ -4,6 +4,9 @@ const choices = {
 };
 Object.freeze(choices);
 
+const modes = ['basic', 'spock'];
+Object.freeze(modes);
+
 /**
  * Game class performs logic functions for the rock paper scissors game
  */
@@ -51,6 +54,14 @@ class Game {
    */
   get mode() {
     return this._mode;
+  }
+
+  /**
+   * Returns the list of allowed game modes
+   *  @returns {string[]}
+   */
+  get modes() {
+    return modes;
   }
 
   /**
@@ -199,7 +210,7 @@ class Game {
   }
 
   // ToDo: local storage save/load state
-  
+
 }
 
 export default Game;
