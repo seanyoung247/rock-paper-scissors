@@ -49,7 +49,7 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header title={<img src={logo[this.state.mode]} alt="Rock Paper Sissors" />}>
+        <Header title={<img src={logo[this.state.mode]} alt={this.game.getGameTitle()} />}>
           <Score score={this.state.score}
             opponent={this.state.opponent} ties={this.state.ties} />
         </Header>
