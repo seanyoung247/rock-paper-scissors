@@ -23,6 +23,7 @@ class App extends React.Component {
       opponent: 0,
       ties: 0
     };
+    this.setMode = this.setMode.bind(this);
     this.setScore = this.setScore.bind(this);
   }
   
