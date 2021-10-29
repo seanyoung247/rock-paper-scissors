@@ -28,7 +28,8 @@ class App extends React.Component {
 
   setMode(mode) {
     if (this.game.modes.includes(mode)) {
-      this.setState({mode: mode});
+      this.game.mode = mode;
+      this.setState({mode: this.game.mode});
     }
   }
 
