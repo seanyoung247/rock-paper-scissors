@@ -17,11 +17,41 @@
   --icon-size: var(--item-size);
   --image-size: calc(var(--icon-size) / 2.5);
 
+  position: relative;
+  width: calc(var(--icon-size) - (var(--border-width) * 2));
+  height: calc(var(--icon-size) - (var(--border-width) * 2));
   border-radius: 50%;
   border: none;
   color: transparent;
   background: white;
   box-shadow: 0 5px #00000025 inset;
+
+  transition: 0.5s;
+}
+
+.badge:hover {
+  --icon-size: calc(var(--item-size) + 10px);
+}
+
+.badge::before {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: inherit;
+
+  background: linear-gradient(0deg,
+    var(--start-color) 0%,
+    var(--end-color) 100%);
+  box-shadow: 0 5px var(--shadow-color);
+
+  transition: 0.5s;
+}
 
 .badge.rock {
   background: white url('../images/icon-rock.svg') center/var(--image-size) no-repeat;
