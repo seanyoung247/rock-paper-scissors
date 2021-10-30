@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Game from '../logic/game.js';
 
 import Chooser from './chooser.js';
 import Display from './display.js';
@@ -33,8 +32,8 @@ class GameUI extends Component {
         setup: ()=>{
           this.props.game.scoreGame();
           this.props.setScore(
-            this.props.game.getPlayer(1).score,   // Player 1 wins
-            this.props.game.getPlayer(2).score,   // Player 2 wins
+            this.props.game.getPlayer(1).score,   // Player 1 win count
+            this.props.game.getPlayer(2).score,   // Player 2 win count
             this.props.game.ties                  // Number of ties
           );
         },
@@ -44,7 +43,6 @@ class GameUI extends Component {
   }
 
   // ToDo: Save and recover state on mount/unmount
-  // ToDo: Mode switching
 
   setStep(step) {
     this.steps[step].setup();
