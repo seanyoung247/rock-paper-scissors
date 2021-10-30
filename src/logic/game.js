@@ -87,7 +87,7 @@ class Game {
       this._choices = newMode;
     }
   }
-  
+
   /**
    * Returns the name of the current game mode.
    *  @returns {string}
@@ -169,71 +169,20 @@ class Game {
    *  @returns 0 if tie, 1 if player 1, 2 if player 2
    */
   _checkWinner(p1, p2) {
-    // This works by splitting the list of options in half using the first
-    // choice as the pivot and wrapping at the ends. If the second choice
-    // is in the "high" half it wins, if it is in the low half it loses.
-    // Correct choice array order is required for correct response.
-    const mod = (a, b, c = a % b) => (c < 0) ? c + b : c;
-    const count = this._choices.length;
-
-    if (p1 === p2) return 0;                        // Tie
-    if (mod(p1 - p2, count) < count / 2) return 1;  // Player one wins
-    else return 2;                                  // Player two wins
-    
     /*
       Based on the win algorithm found in wikipedia article:
       https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons
       The winning player is determined by subtracting the numeric value of
       player two's choice from player one's, then taking the modulo remainder
-      when modded by number of choices.
+      modded by number of choices.
       If the remainder is zero, there is a tie. If it is odd player one has
       won. If it is even player two has won.
       The choice array needs to be correctly ordered for the correct response.
      */
-//     const modr(x, y) => (x + y) % y;
-    
-//     return modr(p1 - p2, this._choices.length);
+    const modr = (x, y) => (x + y) % y;
+    const x = p1 - p2;
+    return x && (modr(modr(x, this._choices.length), 2) + 1);
   }
-  
-  /*
-Subtract the number chosen by player two from the number chosen by player one, 
-and then take the remainder modulo 5 of the result. 
-
-Player one is the victor if the difference is one or three,
-
-player two is the victor if the difference 
-is two or four.
-
-If the difference is zero, the game is a tie.
-*/
-
-// function declare(val) {
-// 	if (val === 0) return "ties";
-//   if (val === 1) return "beats";
-//   else if (val === 2) return "beats";
-//   else return "WTF!";
-// }
-
-// function modr(x, y) {return (x + y) % y;}
-
-// //const choices = ["rock", "spock", "paper", "lizard", "scissors"];
-// const choices = ["scissors", "paper", "rock", "lizard", "spock"];
-
-// console.log(choices.length);
-
-// for (let p1 = 0; p1 < choices.length; p1++) {
-// 	for (let p2 = 0; p2 < choices.length; p2++) {
-  
-//   	const x = p1 - p2;
-//   	const winner = x && (modr(modr(x, choices.length), 2) + 1);
-//   	//const winner = ((p1 - p2) + choices.length) % choices.length;
-    
-    
-//     console.log(`${choices[p1]} ${declare(winner)} ${choices[p2]} (${winner})`);
-//   }
-// }
-
-
 
   // Game State handling
 
