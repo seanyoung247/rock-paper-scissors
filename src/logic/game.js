@@ -15,7 +15,7 @@ const names = {
 };
 Object.freeze(names);
 
-const modes = ['basic', 'spock'];
+const modes = ["basic", "spock"];
 Object.freeze(modes);
 
 /**
