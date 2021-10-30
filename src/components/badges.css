@@ -22,4 +22,34 @@
   color: transparent;
   background: white;
   box-shadow: 0 5px #00000025 inset;
+
+.badge.rock {
+  background: white url('../images/icon-rock.svg') center/var(--image-size) no-repeat;
+  --shadow-color: hsl(349, 70%, 46%);
+  --start-color: hsl(349, 71%, 52%);
+  --end-color: hsl(349, 70%, 56%);
+}
+.badge.paper {
+  background: white url('../images/icon-paper.svg') center/var(--image-size) no-repeat;
+  --shadow-color: hsl(230, 89%, 46%);
+  --start-color: hsl(230, 89%, 62%);
+  --end-color: hsl(230, 89%, 65%);
+}
+.badge.scissors {
+  background: white url('../images/icon-scissors.svg') center/var(--image-size) no-repeat;
+  --shadow-color: hsl(40, 84%, 46%);
+  --start-color: hsl(39, 89%, 49%);
+  --end-color: hsl(40, 84%, 53%);
+}
+.badge.lizard {
+  background: white url('../images/icon-lizard.svg') center/var(--image-size) no-repeat;
+  --shadow-color: hsl(261, 72%, 46%);
+  --start-color: hsl(261, 73%, 60%);
+  --end-color: hsl(261, 72%, 63%);
+}
+.badge.spock {
+  background: white url('../images/icon-spock.svg') center/var(--image-size) no-repeat;
+  --shadow-color: hsl(189, 59%, 46%);
+  --start-color: hsl(189, 59%, 53%);
+  --end-color: hsl(189, 58%, 57%);
 }
