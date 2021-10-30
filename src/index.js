@@ -6,6 +6,8 @@ import './index.css';
 import basicLogo from './images/logo.svg';
 import spocklogo from './images/logo-bonus.svg';
 
+import Game from './logic/game.js';
+
 import Header from './sections/header.js';
 import Score from './components/score.js';
 import GameUI from './components/gameui.js';
@@ -26,7 +28,7 @@ class App extends React.Component {
     this.setMode = this.setMode.bind(this);
     this.setScore = this.setScore.bind(this);
   }
-  
+
   componentDidMount(){
     document.title = this.game.getGameTitle();
   }
