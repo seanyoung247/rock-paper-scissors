@@ -84,3 +84,22 @@
   --start-color: hsl(189, 59%, 53%);
   --end-color: hsl(189, 58%, 57%);
 }
+
+/*
+ * Desktop Styles
+ */
+@media only screen and (min-width: 1366px) {
+  .chooser.basic {
+    --diameter: 500px;
+    --item-size: 200px;
+    --border-width: 22px;
+    --offset: calc((var(--diameter) - var(--item-size)) / 2);
+  }
+  /* Sizes for chooser control in the spock game */
+  .chooser.spock {
+    --diameter: 500px;
+    --item-size: 150px;
+    --border-width: 16px;
+    --offset: calc((var(--diameter) - var(--item-size)) / 2);
+  }
+}
