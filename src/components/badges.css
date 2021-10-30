@@ -1,0 +1,25 @@
+/* Sizes for chooser control in the basic game */
+.chooser.basic {
+  --diameter: 350px;
+  --item-size: 130px;
+  --border-width: 15px;
+  --offset: calc((var(--diameter) - var(--item-size)) / 2);
+}
+/* Sizes for chooser control in the spock game */
+.chooser.spock {
+  --diameter: 350px;
+  --item-size: 100px;
+  --border-width: 10px;
+  --offset: calc((var(--diameter) - var(--item-size)) / 2);
+}
+
+.badge {
+  --icon-size: var(--item-size);
+  --image-size: calc(var(--icon-size) / 2.5);
+
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+  background: white;
+  box-shadow: 0 5px #00000025 inset;
+}

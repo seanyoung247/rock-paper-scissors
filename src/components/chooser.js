@@ -1,14 +1,15 @@
+import './badges.css';
 import './chooser.css';
 
 function Chooser(props) {
   return (
-    <div className="chooser">
+    <div className={`chooser ${props.className}`}>
       <div className="circle" />
-      <ul className="" style={{ "--n": props.choices.length }}>
+      <ul className="" style={{"--n":props.choices.length }}>
         {props.choices.map((data, index)=>(
-          <li key={index} style={{ "--i": index}}>
+          <li key={index} style={{"--i":index}}>
             <button
-              className={`choice-icon ${data}`}
+              className={`${props.itemClass} ${data}`}
               onClick={()=>props.choose(props.player, index)}>
               {data}
             </button>

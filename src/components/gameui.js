@@ -13,7 +13,9 @@ class GameUI extends Component {
         setup: ()=>this.props.game.newRound(),
         render: ()=>(
           <Chooser choices={this.props.game.choices}
-                    player={1} choose={this.setChoice} />
+                    player={1} choose={this.setChoice}
+                    className={this.props.game.mode}
+                    itemClass="badge" />
         )
       },
       {
