@@ -6,7 +6,6 @@
 const choices = {
   basic: ["scissors", "paper", "rock"],
   spock: ["scissors", "paper", "rock", "lizard", "spock"]
-  //spock: ["rock", "spock", "paper", "lizard", "scissors"]
 };
 Object.freeze(choices);
 
@@ -170,7 +169,7 @@ class Game {
    */
   _checkWinner(p1, p2) {
     /*
-      Based on the win algorithm found in wikipedia article:
+      Based on the win algorithm described in wikipedia article:
       https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons
       The winning player is determined by subtracting the numeric value of
       player two's choice from player one's, then taking the modulo remainder
