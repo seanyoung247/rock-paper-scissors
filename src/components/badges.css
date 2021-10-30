@@ -16,6 +16,7 @@
 .badge {
   --icon-size: var(--item-size);
   --image-size: calc(var(--icon-size) / 2.5);
+  --anim-time: 0.25s;
 
   position: relative;
   width: calc(var(--icon-size) - (var(--border-width) * 2));
@@ -26,11 +27,11 @@
   background: white;
   box-shadow: 0 5px #00000025 inset;
 
-  transition: 0.5s;
+  transition: var(--anim-time);
 }
 
 .badge:hover {
-  --icon-size: calc(var(--item-size) + 10px);
+  --icon-size: calc(var(--item-size) + 15px);
 }
 
 .badge::before {
@@ -50,7 +51,7 @@
     var(--end-color) 100%);
   box-shadow: 0 5px var(--shadow-color);
 
-  transition: 0.5s;
+  transition: var(--anim-time);
 }
 
 .badge.rock {
