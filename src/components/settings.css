@@ -1,0 +1,9 @@
+.settings-icon {
+  background: none;
+  border: none;
+}
+
+.settings-icon img {
+  width: 48px;
+  height: 48px;
+}

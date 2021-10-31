@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+import './settings.css';
 
 import gearLogo from '../images/icon-gear.svg';
 
