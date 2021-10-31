@@ -25,12 +25,24 @@ class Settings extends Component {
       // Reset Game
       // Close Button
     return (
-      <button>
-        <img src={gearLogo} alt="Settings" />
-        
-      </button>
+      <Fragment>
+        <button className="settings-icon" onClick={this.toggleShow} >
+          <img src={gearLogo} alt="Settings" />
+        </button>
+        {
+          this.state.show && (
+            <div className="settings-dialog">
+              Settings
+            </div>
+          )
+        }
+      </Fragment>
     );
   }
+}
+
+Settings.defaultProps = {
+  show: false
 }
 
 export default Settings
