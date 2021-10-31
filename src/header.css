@@ -1,0 +1,33 @@
+
+header {
+  display: flex;
+  position: relative;
+  border: 3px solid var(--header-outline-color);
+  border-radius: 10px;
+
+  margin: 30px;
+  padding: 17px;
+  width: calc(var(--mobile-content-width) - 60px);
+
+  font-weight: 700;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-img {
+  height: 48px;
+}
+
+/*
+ * Desktop styles
+ */
+@media only screen and (min-width: 1366px) {
+  header {
+    margin: 45px;
+    padding: 22px;
+    width: calc(var(--desktop-content-width) - 90px);
+  }
+  .title-img {
+    height: 95px;
+  }
+}
