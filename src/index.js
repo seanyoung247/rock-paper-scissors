@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
+import './header.css';
 
 import basicLogo from './images/logo.svg';
 import spocklogo from './images/logo-bonus.svg';
 
 import Game from './logic/game.js';
 
-import Header from './sections/header.js';
 import Score from './components/score.js';
 import GameUI from './components/gameui.js';
+import Settings from './components/settings.js';
 import RulesModal from './components/rulesmodal.js';
 
 const logo = {basic: basicLogo, spock: spocklogo};
@@ -51,13 +52,23 @@ class App extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <Header title={<img src={logo[this.state.mode]} alt={this.game.getGameTitle()} />}>
-          <Score score={this.state.score}
-            opponent={this.state.opponent} ties={this.state.ties} />
-        </Header>
+        <header>
+          <img className="title-img"
+            src={logo[this.state.mode]}
+            alt={this.game.getGameTitle()} />
+
+          <Settings game={this.game} />
+
+          <Score
+            score={this.state.score}
+            opponent={this.state.opponent}
+            ties={this.state.ties} />
+        </header>
+
         <section className="gamePanel">
           <GameUI game={this.game} setScore={this.setScore} />
         </section>
+        
         <footer>
           <RulesModal show={false} rules={this.state.mode}/>
         </footer>
