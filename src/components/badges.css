@@ -3,13 +3,15 @@
   --diameter: 350px;
   --item-size: 130px;
   --border-width: 15px;
-  --offset: calc((var(--diameter) - var(--item-size)) / 2);
 }
 /* Sizes for chooser control in the spock game */
 .chooser.spock {
   --diameter: 350px;
   --item-size: 100px;
   --border-width: 10px;
+}
+
+.chooser {
   --offset: calc((var(--diameter) - var(--item-size)) / 2);
 }
 
@@ -93,13 +95,10 @@
     --diameter: 500px;
     --item-size: 200px;
     --border-width: 22px;
-    --offset: calc((var(--diameter) - var(--item-size)) / 2);
   }
-  /* Sizes for chooser control in the spock game */
   .chooser.spock {
     --diameter: 500px;
     --item-size: 150px;
     --border-width: 16px;
-    --offset: calc((var(--diameter) - var(--item-size)) / 2);
   }
 }
