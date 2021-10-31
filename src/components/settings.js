@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import gearLogo from '../images/icon-gear.svg';
+
 class Settings extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ class Settings extends Component {
       show: !state.show
     }));
   }
-  
+
   render() {
     // Toggle icon (gear?)
     // Settings modal:
@@ -20,6 +22,13 @@ class Settings extends Component {
       // Game mode
       // Reset Game
       // Close Button
-    return (<p>None</p>);
+    return (
+      <button>
+        <img src={gearLogo} alt="Settings" />
+        
+      </button>
+    );
   }
 }
+
+export default Settings
