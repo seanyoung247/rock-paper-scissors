@@ -58,7 +58,7 @@
 
 .badge.rock {
   background: white url('../images/icon-rock.svg') center/var(--image-size) no-repeat;
-  --shadow-color: hsl(349, 70%, 46%);
+  --shadow-color: hsl(349, 70%, 36%);
   --start-color: hsl(349, 71%, 52%);
   --end-color: hsl(349, 70%, 56%);
 }
@@ -70,7 +70,7 @@
 }
 .badge.scissors {
   background: white url('../images/icon-scissors.svg') center/var(--image-size) no-repeat;
-  --shadow-color: hsl(40, 84%, 46%);
+  --shadow-color: hsl(40, 84%, 36%);
   --start-color: hsl(39, 89%, 49%);
   --end-color: hsl(40, 84%, 53%);
 }
@@ -82,7 +82,7 @@
 }
 .badge.spock {
   background: white url('../images/icon-spock.svg') center/var(--image-size) no-repeat;
-  --shadow-color: hsl(189, 59%, 46%);
+  --shadow-color: hsl(189, 59%, 36%);
   --start-color: hsl(189, 59%, 53%);
   --end-color: hsl(189, 58%, 57%);
 }
