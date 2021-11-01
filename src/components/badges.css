@@ -30,6 +30,7 @@
   position: relative;
   width: calc(var(--icon-size) - (var(--border-width) * 2));
   height: calc(var(--icon-size) - (var(--border-width) * 2));
+  margin: var(--border-width);
   border-radius: 50%;
   border: none;
   color: transparent;
