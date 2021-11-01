@@ -19,7 +19,7 @@
   overflow: hidden;
 
   left: 5%;
-  height: 0;
+  max-height: 0;
   width: 90%;
   color: black;
   z-index: 99;
@@ -29,11 +29,11 @@
 
   box-shadow: 0 5px 5px #00000060, inset 0 20px 20px -20px rgba(0,0,0,0.8);
 
-  transition: height 1s;
+  transition: max-height 0.5s;
 }
 
 .menu-dialog.show {
-  height: 200px;
+  max-height: 500px;
 }
 
 .menu-wrapper {
@@ -43,10 +43,16 @@
   padding: 10px;
 }
 
-.menu-dialog h2 {
+.menu-dialog * {
   color: var(--dark-color);
   text-transform: uppercase;
+  margin: 5px;
+}
+
+.menu-dialog h2 {
+  text-transform: uppercase;
   text-align: center;
+  border-bottom: 1px solid var(--dark-color);
 }
 
 .score-list {
@@ -55,7 +61,27 @@
 
 .score-list li {
   display: inline-block;
+  padding: 5px;
+}
 
+.menu-button {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.25s;
+}
+.menu-button:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.game-mode {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  width: 100%;
 }
 
 .menu-close {

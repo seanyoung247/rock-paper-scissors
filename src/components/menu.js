@@ -37,12 +37,14 @@ class Menu extends Component {
               <li>Ties: {this.props.score.ties}</li>
             </ul>
 
-            <button onClick={()=>this.props.settings.callback("reset", true)}>
+            <button className="menu-button"
+              onClick={()=>this.props.settings.callback("reset", true)}>
               Restart Game
             </button>
 
             <h2>Settings</h2>
-            <select name="gameModes" value={this.props.settings.mode}
+            <label htmlFor="gameModes">Game : </label>
+            <select className="game-mode" name="gameModes" value={this.props.settings.mode}
               onChange={(e)=>this.props.settings.callback("mode", e.target.value)}>
 
               {this.props.settings.modes.map((data, index)=>(
@@ -51,9 +53,6 @@ class Menu extends Component {
                 </option>
               ))}
             </select>
-
-
-
 
             <button className="menu-close" onClick={this.toggleShow}>
               <img src={closeIcon} alt="Close" />
