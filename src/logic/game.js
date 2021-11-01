@@ -26,9 +26,9 @@ class Game {
     this._mode = mode;
     this._choices = choices[this._mode];
     this._players = [
-      { name: "Tie", score: 0, choice: -1 },
-      { name: "You", score: 0, choice: -1 },
-      { name: "The House", score: 0, choice: -1}
+      { id: 0, name: "Tie", score: 0, choice: -1 },
+      { id: 1, name: "You", score: 0, choice: -1 },
+      { id: 2, name: "The House", score: 0, choice: -1}
     ];
     this._winner = null;
   }
