@@ -35,7 +35,7 @@ class RulesModal extends Component {
             src={rules[this.props.rules]}
             alt="Paper beats Rock beats Scissors beats Paper"
           />
-          <button className="modal-close rules-close" onClick={this.toggleShow}>
+          <button className="rules-close" onClick={this.toggleShow}>
             <img src={closeIcon} alt="Close" />
           </button>
         </Modal>
