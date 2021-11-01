@@ -72,6 +72,11 @@ class App extends React.Component {
   }
 
   render() {
+    const score = {
+      player: this.state.score,
+      opponent: this.state.opponent,
+      ties: this.state.ties
+    }
     document.title = this.game.getGameTitle();
     return (
       <React.StrictMode>
@@ -83,15 +88,20 @@ class App extends React.Component {
           </div>
           <div className="col menu">
             <Menu
-              mode={this.game.mode}
-              modes={this.game.modes}
-              settings  ={this.settings} />
+              score={score}
+              player={{
+                one: this.game.getPlayer(1).name,
+                two: this.game.getPlayer(2).name
+              }}
+              settings={{
+                mode: this.game.mode,
+                modes: this.game.modes,
+                callback: this.settings
+              }} />
           </div>
           <div className="col score">
             <Score
-              score={this.state.score}
-              opponent={this.state.opponent}
-              ties={this.state.ties} />
+              score={score} />
           </div>
         </header>
 
