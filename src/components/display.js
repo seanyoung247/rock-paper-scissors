@@ -15,20 +15,24 @@ function Display(props) {
   return (
     <div className="display">
       <div className="player one">
-        <div className={`badge-container ${(wId === 1) && 'won'}`}>
-          <div className={`badge ${c1}`}>
-            {c1}
+        <div className="player-container">
+          <div className={`badge-container ${(wId === 1) && 'won'}`}>
+            <div className={`badge ${c1}`}>
+              {c1}
+            </div>
           </div>
+          <p className="name">{p1.name} picked</p>
         </div>
-        <p className="name">{p1.name} picked</p>
       </div>
       <div className="player two">
-        <div className={`badge-container ${(wId === 2) && 'won'}`}>
-          <div className={`badge ${c2}`}>
-            {c2}
+        <div className="player-container">
+          <div className={`badge-container ${(wId === 2) && 'won'}`}>
+            <div className={`badge ${c2}`}>
+              {c2}
+            </div>
           </div>
+          <p className="name">{p2.name} picked</p>
         </div>
-        <p className="name">{p2.name} picked</p>
       </div>
 
       {winner && (

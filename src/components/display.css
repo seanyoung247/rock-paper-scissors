@@ -4,13 +4,15 @@
   height: 100%;
   justify-content: space-around;
 }
+
 .player {
   display: flex;
   flex-flow: column;
-  width: 50%;
-  padding: var(--border-basis);
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
+
+  width: 50%;
 }
 .player.one {
   order: 1;
@@ -19,11 +21,21 @@
   order: 2;
 }
 
-.player > .badge-container {
+.player > .player-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  padding: var(--border-basis);
+}
+
+.player-container > .badge-container {
   position: relative;
   overflow: visible;
 }
-.player > .badge-container::before {
+.player-container > .badge-container::before {
   content: '';
   position: absolute;
   z-index: -2;
@@ -36,7 +48,7 @@
 
   transition: width 0.5s, height 0.5s, background 0.75s;
 }
-.player > .badge-container.won::before {
+.player-container > .badge-container.won::before {
   content: '';
   width: 285px;
   height: 285px;
@@ -47,13 +59,14 @@
     #FFFFFF00 70%, #FFFFFF00 100%);
 }
 
-.player > .name {
+.player-container > .name {
   margin-top: 30px;
   text-transform: uppercase;
 }
 
 .winner-box {
   display: flex;
+  flex-grow: 2;
   flex-flow: column;
   align-items: center;
   width: 100%;
@@ -81,4 +94,33 @@
   color: var(--dark-color);
 }
 
-/* TODO: Add desktop styles */
+/*
+ * Desktop Styles
+ */
+@media only screen and (min-width: 1366px) {
+  .player-container > .badge-container.won::before {
+    width: 725px;
+    height: 725px;
+  }
+  .player {
+    flex-grow: 2;
+    width: auto;
+  }
+  .player.one {
+    order: 1;
+    align-items: flex-end;
+  }
+  .player.two {
+    order: 3;
+    align-items: flex-start;
+  }
+  .player > .player-container {
+    margin: 35px;
+  }
+  .winner-box {
+    flex-grow: 1;
+    width: auto;
+    order: 2;
+    justify-content: center;
+  }
+}
