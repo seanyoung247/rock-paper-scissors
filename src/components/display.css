@@ -18,8 +18,33 @@
 .player.two {
   order: 2;
 }
-.player.won {
-  background-color: red;
+
+.player > .badge-container {
+  position: relative;
+  overflow: visible;
+}
+.player > .badge-container::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  width: var(--item-size);
+  height: var(--item-size);
+  transform: translate(-50%, -50%);
+  background: none;
+
+  transition: width 0.5s, height 0.5s, background 0.75s;
+}
+.player > .badge-container.won::before {
+  content: '';
+  width: 285px;
+  height: 285px;
+  background:  radial-gradient(circle at center,
+    #FFFFFF15 0%, #FFFFFF15 40%,
+    #FFFFFF0B 40%, #FFFFFF0B 55%,
+    #FFFFFF05 55%, #FFFFFF05 70%,
+    #FFFFFF00 70%, #FFFFFF00 100%);
 }
 
 .player > .name {
