@@ -24,22 +24,37 @@ class Menu extends Component {
         <button className="menu-icon" onClick={this.toggleShow} >
           <img src={menuIcon} alt="Settings" />
         </button>
+
         <div className={this.state.show ? "menu-dialog show" : "menu-dialog"}>
           <div className="menu-wrapper">
             <h2>Current Game</h2>
-            <h2>Settings</h2>
-            <select name="gameModes" value={this.props.mode}
-              onChange={(e)=>this.props.settings("mode", e.target.value)}>
+            <div>
+              {this.props.player.one} vs {this.props.player.two}
+            </div>
+            <ul className="score-list">
+              <li>Wins: {this.props.score.player}</li>
+              <li>Loses: {this.props.score.opponent}</li>
+              <li>Ties: {this.props.score.ties}</li>
+            </ul>
 
-              {this.props.modes.map((data, index)=>(
+            <button onClick={()=>this.props.settings.callback("reset", true)}>
+              Restart Game
+            </button>
+
+            <h2>Settings</h2>
+            <select name="gameModes" value={this.props.settings.mode}
+              onChange={(e)=>this.props.settings.callback("mode", e.target.value)}>
+
+              {this.props.settings.modes.map((data, index)=>(
                 <option key={index} value={data}>
                   {data}
                 </option>
               ))}
             </select>
-            <button onClick={()=>this.props.settings("reset", true)}>
-              Reset Game
-            </button>
+
+
+
+
             <button className="menu-close" onClick={this.toggleShow}>
               <img src={closeIcon} alt="Close" />
             </button>
