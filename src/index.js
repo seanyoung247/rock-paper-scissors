@@ -26,18 +26,23 @@ class App extends React.Component {
       opponent: 0,
       ties: 0
     };
-    this.setMode = this.setMode.bind(this);
+    this.changeSettings = this.changeSettings.bind(this);
     this.setScore = this.setScore.bind(this);
   }
 
-  componentDidMount(){
-    document.title = this.game.getGameTitle();
-  }
-
-  setMode(mode) {
-    if (this.game.modes.includes(mode)) {
-      this.game.mode = mode;
-      this.setState({mode: this.game.mode});
+  changeSettings(setting, value) {
+    switch (setting) {
+      case "mode":
+        if (this.game.modes.includes(value)) {
+          this.game.mode = value;
+          this.setState({mode: this.game.mode});
+        }
+        break;
+      case "reset":
+        this.game.resetGame();
+        break;
+      default:
+        break;
     }
   }
 
