@@ -28,7 +28,7 @@ class RulesModal extends Component {
         <button className="modal-trigger" onClick={this.toggleShow}>
           Rules
         </button>
-        <Modal show={this.state.show}>
+        <Modal show={this.state.show} toggle={this.toggleShow}>
           <h2 className="rules-title">Rules</h2>
           <img
             className="rules-image"

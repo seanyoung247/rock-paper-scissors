@@ -6,8 +6,8 @@ function Modal(props) {
     <Fragment>
       {
         props.show && (
-          <div className="modal-wrapper">
-            <div className="modal-dialog">
+          <div className="modal-wrapper" onClick={props.toggle}>
+            <div className="modal-dialog" onClick={(e)=>e.stopPropagation()}>
               {props.children}
             </div>
           </div>
