@@ -22,16 +22,20 @@ class App extends React.Component {
     this.game = new Game("basic");
     this.state = {
       mode: "basic",
+      step: 0,
       score: 0,
       opponent: 0,
       ties: 0
     };
-    this.changeSettings = this.changeSettings.bind(this);
+    this.settings = this.settings.bind(this);
     this.setScore = this.setScore.bind(this);
   }
 
-  changeSettings(setting, value) {
+  settings(setting, value) {
     switch (setting) {
+      case "step":
+        this.setState({step: value});
+        break;
       case "mode":
         if (this.game.modes.includes(value)) {
           this.game.mode = value;
@@ -41,6 +45,7 @@ class App extends React.Component {
       case "reset":
         this.game.resetGame();
         this.setState({
+          step: 0,
           score: 0,
           opponent: 0,
           ties: 0
@@ -71,7 +76,7 @@ class App extends React.Component {
           <Settings
             mode={this.game.mode}
             modes={this.game.modes}
-            settings={this.changeSettings} />
+            settings={this.settings} />
 
           <Score
             score={this.state.score}
@@ -80,7 +85,11 @@ class App extends React.Component {
         </header>
 
         <section className="gamePanel">
-          <GameUI game={this.game} setScore={this.setScore} />
+          <GameUI
+            game={this.game}
+            step={this.state.step}
+            settings={this.settings}
+            setScore={this.setScore} />
         </section>
 
         <footer>

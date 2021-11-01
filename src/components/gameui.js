@@ -6,7 +6,6 @@ import Display from './display.js';
 class GameUI extends Component {
   constructor(props) {
     super(props);
-    this.state = {step: 0};
     this.setChoice = this.setChoice.bind(this);
     this.steps = [
       {
@@ -48,16 +47,16 @@ class GameUI extends Component {
 
   setStep(step) {
     this.steps[step].setup();
-    this.setState({step: step});
+    this.props.settings("step", step);
   }
 
   setChoice(player, choice) {
     this.props.game.setPlayerChoice(player, choice);
-    this.setStep(this.state.step + 1);
+    this.setStep(this.props.step + 1);
   }
 
   render() {
-    return this.steps[this.state.step].render();
+    return this.steps[this.props.step].render();
   }
 }
 
