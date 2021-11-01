@@ -10,6 +10,10 @@
   border-radius: 10px;
 }
 
+.modal-trigger:hover {
+  filter: drop-shadow(0 0 5px white);
+}
+
 .modal-dialog {
   display: flex;
   flex-flow: column nowrap;
