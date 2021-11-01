@@ -76,19 +76,23 @@ class App extends React.Component {
     return (
       <React.StrictMode>
         <header>
-          <img className="title-img"
-            src={logo[this.state.mode]}
-            alt={this.game.getGameTitle()} />
-
-          <Settings
-            mode={this.game.mode}
-            modes={this.game.modes}
-            settings={this.settings} />
-
-          <Score
-            score={this.state.score}
-            opponent={this.state.opponent}
-            ties={this.state.ties} />
+          <div className="col title">
+            <img className="title-img"
+              src={logo[this.state.mode]}
+              alt={this.game.getGameTitle()} />
+          </div>
+          <div className="col menu">
+            <Settings
+              mode={this.game.mode}
+              modes={this.game.modes}
+              settings  ={this.settings} />
+          </div>
+          <div className="col score">
+            <Score
+              score={this.state.score}
+              opponent={this.state.opponent}
+              ties={this.state.ties} />
+          </div>
         </header>
 
         <section className="gamePanel">

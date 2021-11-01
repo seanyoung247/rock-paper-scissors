@@ -13,6 +13,19 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+header > .col {
+  display: flex;
+  flex: 1 1 0px;
+}
+header > .col.title {
+  justify-content: flex-start;
+}
+header > .col.menu {
+  justify-content: center;
+}
+header > .col.score {
+  justify-content: flex-end;
+}
 
 .title-img {
   height: 48px;
