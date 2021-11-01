@@ -39,7 +39,14 @@ class App extends React.Component {
       case "mode":
         if (this.game.modes.includes(value)) {
           this.game.mode = value;
-          this.setState({mode: this.game.mode});
+          this.game.resetGame();
+          this.setState({
+            step: 0,
+            score: 0,
+            opponent: 0,
+            ties: 0,
+            mode: this.game.mode
+          });
         }
         break;
       case "reset":
