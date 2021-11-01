@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
-import './settings.css';
+import './menu.css';
 
 import menuIcon from '../images/icon-menu.svg';
 import closeIcon from '../images/icon-close.svg';
 
-class Settings extends Component {
+class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = { show: this.props.show };
@@ -21,11 +21,12 @@ class Settings extends Component {
   render() {
     return (
       <Fragment>
-        <button className="settings-icon" onClick={this.toggleShow} >
+        <button className="menu-icon" onClick={this.toggleShow} >
           <img src={menuIcon} alt="Settings" />
         </button>
-        <div className={this.state.show ? "settings-dialog show" : "settings-dialog"}>
-          <div className="settings-wrapper">
+        <div className={this.state.show ? "menu-dialog show" : "menu-dialog"}>
+          <div className="menu-wrapper">
+            <h2>Current Game</h2>
             <h2>Settings</h2>
             <select name="gameModes" value={this.props.mode}
               onChange={(e)=>this.props.settings("mode", e.target.value)}>
@@ -39,7 +40,7 @@ class Settings extends Component {
             <button onClick={()=>this.props.settings("reset", true)}>
               Reset Game
             </button>
-            <button className="settings-close" onClick={this.toggleShow}>
+            <button className="menu-close" onClick={this.toggleShow}>
               <img src={closeIcon} alt="Close" />
             </button>
           </div>
@@ -49,8 +50,8 @@ class Settings extends Component {
   }
 }
 
-Settings.defaultProps = {
+Menu.defaultProps = {
   show: false
 }
 
-export default Settings
+export default Menu

@@ -9,9 +9,9 @@ import spocklogo from './images/logo-bonus.svg';
 
 import Game from './logic/game.js';
 
+import Menu from './components/menu.js';
 import Score from './components/score.js';
 import GameUI from './components/gameui.js';
-import Settings from './components/settings.js';
 import RulesModal from './components/rulesmodal.js';
 
 const logo = {basic: basicLogo, spock: spocklogo};
@@ -82,7 +82,7 @@ class App extends React.Component {
               alt={this.game.getGameTitle()} />
           </div>
           <div className="col menu">
-            <Settings
+            <Menu
               mode={this.game.mode}
               modes={this.game.modes}
               settings  ={this.settings} />
