@@ -27,8 +27,8 @@ function Display(props) {
       </div>
 
       {winner && (
-        <div>
-          <p>You {messages[winner.id]}</p>
+        <div className="winner-box">
+          <h2>You {messages[winner.id]}</h2>
           <button onClick={props.reset}>
             Play Again
           </button>
