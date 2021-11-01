@@ -9,8 +9,8 @@
   flex-flow: column;
   width: 50%;
   padding: var(--border-basis);
-  margin-bottom: 30px;
   align-items: center;
+  justify-content: center;
 }
 .player.one {
   order: 1;
@@ -20,7 +20,7 @@
 }
 
 .player > .name {
-  margin-top: 20px;
+  margin-top: 30px;
   text-transform: uppercase;
 }
 
@@ -28,7 +28,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-
   width: 100%;
 
   order: 3;
@@ -36,12 +35,21 @@
 
 .winner-box > h2 {
   text-transform: uppercase;
+  font-size: 52px;
+  margin-bottom: 15px;
 }
 
 .winner-box > button {
   text-transform: uppercase;
   padding: 10px;
 
+  height: 48px;
+  width: 220px;
   border: none;
   border-radius: 10px;
+
+  font-weight: 700;
+  color: var(--dark-color);
 }
+
+/* TODO: Add desktop styles */
