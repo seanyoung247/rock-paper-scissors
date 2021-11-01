@@ -55,6 +55,7 @@ class App extends React.Component {
   }
 
   render() {
+    document.title = this.game.getGameTitle();
     return (
       <React.StrictMode>
         <header>
@@ -73,7 +74,7 @@ class App extends React.Component {
         <section className="gamePanel">
           <GameUI game={this.game} setScore={this.setScore} />
         </section>
-        
+
         <footer>
           <RulesModal show={false} rules={this.state.mode}/>
         </footer>
