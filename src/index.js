@@ -63,7 +63,10 @@ class App extends React.Component {
             src={logo[this.state.mode]}
             alt={this.game.getGameTitle()} />
 
-          <Settings game={this.game} />
+          <Settings
+            mode={this.game.mode}
+            modes={this.game.modes}
+            settings={this.changeSettings} />
 
           <Score
             score={this.state.score}
