@@ -18,6 +18,9 @@
 .player.two {
   order: 2;
 }
+.player.won {
+  background-color: red;
+}
 
 .player > .name {
   margin-top: 30px;

@@ -13,13 +13,13 @@ function Display(props) {
 
   return (
     <div className="display">
-      <div className="player one">
+      <div className={`player one ${(winner && winner.id === 1) && 'won'}`}>
         <div className={`badge ${c1}`}>
           {c1}
         </div>
         <p className="name">{p1.name} picked</p>
       </div>
-      <div className="player two">
+      <div className={`player two ${(winner && winner.id === 2) && 'won'}`}>
         <div className={`badge ${c2}`}>
           {c2}
         </div>
