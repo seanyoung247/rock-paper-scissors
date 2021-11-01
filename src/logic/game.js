@@ -98,6 +98,14 @@ class Game {
   }
 
   /**
+   * Returns the names of all the game modes
+   *  @returns {string[]}
+   */
+  getGameTitles() {
+    return names;
+  }
+
+  /**
    * Returns the player object for given player id
    *  @param {number} player - the player id number
    */
