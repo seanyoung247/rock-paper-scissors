@@ -16,6 +16,11 @@
   --offset: calc((var(--diameter) - var(--item-size)) / 2);
 }
 
+.display {
+  --item-size: 130px;
+  --border-base: 15px;
+}
+
 .badge {
   --icon-size: var(--item-size);
   --border-width: var(--border-base);
