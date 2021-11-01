@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import './settings.css';
 
-import gearLogo from '../images/icon-gear.svg';
+import menuIcon from '../images/icon-menu.svg';
 import closeIcon from '../images/icon-close.svg';
 
 class Settings extends Component {
@@ -22,7 +22,7 @@ class Settings extends Component {
     return (
       <Fragment>
         <button className="settings-icon" onClick={this.toggleShow} >
-          <img src={gearLogo} alt="Settings" />
+          <img src={menuIcon} alt="Settings" />
         </button>
         <div className={this.state.show ? "settings-dialog show" : "settings-dialog"}>
           <div className="settings-wrapper">
