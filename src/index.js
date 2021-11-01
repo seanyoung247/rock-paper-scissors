@@ -19,13 +19,15 @@ const logo = {basic: basicLogo, spock: spocklogo};
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.game = new Game("basic");
+    this.game = new Game();
+    this.game.loadGame();
+
     this.state = {
-      mode: "basic",
+      mode: this.game.mode,
       step: 0,
-      score: 0,
-      opponent: 0,
-      ties: 0
+      score: this.game.getPlayer(1).score,
+      opponent: this.game.getPlayer(2).score,
+      ties: this.game.ties
     };
     this.settings = this.settings.bind(this);
     this.setScore = this.setScore.bind(this);
@@ -61,9 +63,11 @@ class App extends React.Component {
       default:
         break;
     }
+    this.game.saveGame();
   }
 
   setScore(score, opponent=0, tie=0) {
+    this.game.saveGame();
     this.setState({
       score: score,
       opponent: opponent,

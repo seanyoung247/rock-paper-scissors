@@ -18,6 +18,8 @@ Object.freeze(names);
 const modes = ["basic", "spock"];
 Object.freeze(modes);
 
+// Improvement: Could have explinations for winning losing
+
 /**
  * Game class performs logic functions for the rock paper scissors game
  */
@@ -33,7 +35,7 @@ class Game {
     this._winner = null;
   }
 
-  // Getter and Setters
+  // Getters and Setters
 
   /**
    * Returns the string value of a given numeric choice
@@ -229,10 +231,30 @@ class Game {
       this._players[i].score = 0;
     }
     this._winner = null;
+    sessionStorage.clear();
   }
 
-  // ToDo: local storage save/load state
+  /**
+   * Stores the current game state to session storage
+   */
+  saveGame() {
+    sessionStorage.setItem('game_saved', 'true');
+    sessionStorage.setItem('game_mode', this._mode);
+    for (let i = 0; i < this._players.length; i++) {
+      sessionStorage.setItem(`player${i}`, this._players[i].score);
+    }
+  }
 
+  /**
+   * Loads the game state from session storage
+   */
+  loadGame() {
+    this.mode = sessionStorage.getItem('game_mode') || 'basic';
+    this._choices = choices[this._mode];
+    for (let i = 0; i < this._players.length; i++) {
+      this._players[i].score = parseInt(sessionStorage.getItem(`player${i}`) || 0);
+    }
+  }
 }
 
 export default Game;
