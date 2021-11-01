@@ -47,7 +47,7 @@ class Menu extends Component {
 
               {this.props.settings.modes.map((data, index)=>(
                 <option key={index} value={data}>
-                  {data}
+                  {this.props.settings.names[data]}
                 </option>
               ))}
             </select>

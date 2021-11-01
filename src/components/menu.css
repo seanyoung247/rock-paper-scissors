@@ -65,6 +65,7 @@
 }
 
 .game-mode {
+  text-transform: capitalize;
   background: none;
   border: none;
   border-bottom: 1px solid var(--dark-color);

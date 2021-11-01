@@ -100,6 +100,7 @@ class App extends React.Component {
               settings={{
                 mode: this.game.mode,
                 modes: this.game.modes,
+                names: this.game.getGameTitles(),
                 callback: this.settings
               }} />
           </div>
