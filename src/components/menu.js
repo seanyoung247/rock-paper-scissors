@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 
 import './menu.css';
-
-import menuIcon from '../images/icon-menu.svg';
 import closeIcon from '../images/icon-close.svg';
+
+import MenuIcon from './menuIcon.js';
 
 class Menu extends Component {
   constructor(props) {
@@ -21,15 +21,13 @@ class Menu extends Component {
   render() {
     return (
       <Fragment>
-        <button className="menu-icon" onClick={this.toggleShow} >
-          <img src={menuIcon} alt="Settings" />
-        </button>
+        <MenuIcon show={this.state.show} toggle={this.toggleShow} />
 
         <div className={this.state.show ? "menu-dialog show" : "menu-dialog"}>
           <div className="menu-wrapper">
             <h2>Current Game</h2>
             <div>
-              {this.props.player.one} vs {this.props.player.two}
+              {this.props.player.one} -vs- {this.props.player.two}
             </div>
             <ul className="score-list">
               <li>Wins: {this.props.score.player}</li>
