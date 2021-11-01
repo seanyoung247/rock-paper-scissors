@@ -40,6 +40,11 @@ class App extends React.Component {
         break;
       case "reset":
         this.game.resetGame();
+        this.setState({
+          score: 0,
+          opponent: 0,
+          ties: 0
+        });
         break;
       default:
         break;

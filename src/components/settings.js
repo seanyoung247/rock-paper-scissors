@@ -36,7 +36,7 @@ class Settings extends Component {
                 </option>
               ))}
             </select>
-            <button>
+            <button onClick={()=>this.props.settings("reset", true)}>
               Reset Game
             </button>
             <button className="settings-close" onClick={this.toggleShow}>
