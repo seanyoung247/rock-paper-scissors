@@ -116,4 +116,8 @@ button.badge:hover {
     --item-size: 150px;
     --border-base: 16px;
   }
+  .display {
+    --item-size: 290px;
+    --border-base: 35px;
+  }
 }
