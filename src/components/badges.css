@@ -59,6 +59,12 @@ button.badge:hover {
   transition: var(--anim-time);
 }
 
+.badge.empty {
+  background-color: rgba(0,0,0,0.25);
+  --shadow-color: none;
+  --start-color: none;
+  --end-color: none;
+}
 .badge.rock {
   background: white url('../images/icon-rock.svg') center/var(--image-size) no-repeat;
   --shadow-color: hsl(349, 70%, 36%);
