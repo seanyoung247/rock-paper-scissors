@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/rock-paper-scissors/static/css/main.aa79cb6a.chunk.css",
-    "main.js": "/rock-paper-scissors/static/js/main.854edda3.chunk.js",
-    "main.js.map": "/rock-paper-scissors/static/js/main.854edda3.chunk.js.map",
+    "main.css": "/rock-paper-scissors/static/css/main.a2ca49bc.chunk.css",
+    "main.js": "/rock-paper-scissors/static/js/main.bcb34fe5.chunk.js",
+    "main.js.map": "/rock-paper-scissors/static/js/main.bcb34fe5.chunk.js.map",
     "runtime-main.js": "/rock-paper-scissors/static/js/runtime-main.ed2b9e8e.js",
     "runtime-main.js.map": "/rock-paper-scissors/static/js/runtime-main.ed2b9e8e.js.map",
-    "static/js/2.9a8a4229.chunk.js": "/rock-paper-scissors/static/js/2.9a8a4229.chunk.js",
-    "static/js/2.9a8a4229.chunk.js.map": "/rock-paper-scissors/static/js/2.9a8a4229.chunk.js.map",
+    "static/js/2.8272ee40.chunk.js": "/rock-paper-scissors/static/js/2.8272ee40.chunk.js",
+    "static/js/2.8272ee40.chunk.js.map": "/rock-paper-scissors/static/js/2.8272ee40.chunk.js.map",
     "index.html": "/rock-paper-scissors/index.html",
-    "static/css/main.aa79cb6a.chunk.css.map": "/rock-paper-scissors/static/css/main.aa79cb6a.chunk.css.map",
-    "static/js/2.9a8a4229.chunk.js.LICENSE.txt": "/rock-paper-scissors/static/js/2.9a8a4229.chunk.js.LICENSE.txt",
+    "static/css/main.a2ca49bc.chunk.css.map": "/rock-paper-scissors/static/css/main.a2ca49bc.chunk.css.map",
+    "static/js/2.8272ee40.chunk.js.LICENSE.txt": "/rock-paper-scissors/static/js/2.8272ee40.chunk.js.LICENSE.txt",
     "static/media/icon-close.bde602ec.svg": "/rock-paper-scissors/static/media/icon-close.bde602ec.svg",
+    "static/media/icon-gear.79fcecf3.svg": "/rock-paper-scissors/static/media/icon-gear.79fcecf3.svg",
+    "static/media/badges.css": "/rock-paper-scissors/static/media/icon-spock.f4d7eee8.svg",
+    "static/media/image-rules-bonus.513320fb.svg": "/rock-paper-scissors/static/media/image-rules-bonus.513320fb.svg",
     "static/media/image-rules.258b753f.svg": "/rock-paper-scissors/static/media/image-rules.258b753f.svg",
+    "static/media/logo-bonus.9bf8aeb8.svg": "/rock-paper-scissors/static/media/logo-bonus.9bf8aeb8.svg",
     "static/media/logo.a4a2b39f.svg": "/rock-paper-scissors/static/media/logo.a4a2b39f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ed2b9e8e.js",
-    "static/js/2.9a8a4229.chunk.js",
-    "static/css/main.aa79cb6a.chunk.css",
-    "static/js/main.854edda3.chunk.js"
+    "static/js/2.8272ee40.chunk.js",
+    "static/css/main.a2ca49bc.chunk.css",
+    "static/js/main.bcb34fe5.chunk.js"
   ]
 }
