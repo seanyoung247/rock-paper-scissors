@@ -2,13 +2,14 @@
 .chooser.basic {
   --diameter: 350px;
   --item-size: 130px;
-  --border-width: 15px;
+  --border-base: 15px;
+  margin-top: calc(-1 * (var(--item-size) /4))
 }
 /* Sizes for chooser control in the spock game */
 .chooser.spock {
   --diameter: 350px;
   --item-size: 100px;
-  --border-width: 10px;
+  --border-base: 10px;
 }
 
 .chooser {
@@ -17,6 +18,7 @@
 
 .badge {
   --icon-size: var(--item-size);
+  --border-width: var(--border-base);
   --image-size: calc(var(--icon-size) / 2.5);
   --anim-time: 0.25s;
 
@@ -32,8 +34,9 @@
   transition: var(--anim-time);
 }
 
-.badge:hover {
-  --icon-size: calc(var(--item-size) + 15px);
+button.badge:hover {
+  --icon-size: calc(var(--item-size) * 1.15);
+  --border-width: calc(var(--border-base) * 1.15);
 }
 
 .badge::before {
@@ -94,11 +97,11 @@
   .chooser.basic {
     --diameter: 500px;
     --item-size: 200px;
-    --border-width: 22px;
+    --border-base: 22px;
   }
   .chooser.spock {
     --diameter: 500px;
     --item-size: 150px;
-    --border-width: 16px;
+    --border-base: 16px;
   }
 }
