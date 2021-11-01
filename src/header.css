@@ -7,7 +7,7 @@ header {
 
   margin: 30px;
   padding: 17px;
-  width: calc(var(--mobile-content-width) - 60px);
+  width: calc(var(--mobile-width) - 60px);
 
   font-weight: 700;
   justify-content: space-between;
@@ -25,7 +25,7 @@ header {
   header {
     margin: 45px;
     padding: 22px;
-    width: calc(var(--desktop-content-width) - 90px);
+    width: calc(var(--desktop-header-width) - 90px);
   }
   .title-img {
     height: 95px;

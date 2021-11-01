@@ -3,9 +3,8 @@
 :root {
   /* Screen Sizes */
   --mobile-width: 375px;
-  --mobile-content-width: 375px;
   --desktop-width: 1366px;
-  --desktop-content-width: 700px;
+  --desktop-header-width: 700px;
   /* Colours */
   --light-color: white;
   --dark-color: hsl(229, 25%, 31%);
@@ -36,7 +35,7 @@ html {
 }
 
 body {
-  max-width: var(--mobile-content-width);
+  max-width: var(--mobile-width);
   height: 100vh;
   margin: auto;
 }
@@ -53,7 +52,7 @@ body {
 
 .gamePanel {
   position: relative;
-  width: var(--mobile-content-width);
+  width: var(--mobile-width);
   margin: auto;
   flex-grow: 1;
 }
@@ -61,7 +60,7 @@ body {
 footer {
   display: flex;
   justify-content: center;
-  width: var(--mobile-content-width);
+  width: var(--mobile-width);
   padding: 30px;
 }
 
@@ -70,6 +69,9 @@ footer {
   */
 @media only screen and (min-width: 1366px) {
   body {
+    max-width: var(--desktop-width);
+  }
+  .gamePanel {
     width: var(--desktop-width);
   }
   footer {
