@@ -1,0 +1,46 @@
+.display {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+.player {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  padding: var(--border-basis);
+  margin-bottom: 30px;
+  align-items: center;
+}
+.player.one {
+  order: 1;
+}
+.player.two {
+  order: 2;
+}
+
+.player > .name {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.winner-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  width: 100%;
+
+  order: 3;
+}
+
+.winner-box > h2 {
+  text-transform: uppercase;
+}
+
+.winner-box > button {
+  text-transform: uppercase;
+  padding: 10px;
+
+  border: none;
+  border-radius: 10px;
+}

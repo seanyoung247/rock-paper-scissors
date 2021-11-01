@@ -1,3 +1,4 @@
+import './display.css';
 import './badges.css';
 
 const messages = ["Tie", "Win", "Lose"];
