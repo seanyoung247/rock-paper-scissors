@@ -15,9 +15,9 @@
 
 .chooser {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
 }
 .chooser > .circle {
   position: absolute;
@@ -57,4 +57,16 @@
     rotate(var(--a))              /* Rotate to align with required position */
     translate(var(--offset))      /* Move to circle boundary */
     rotate(calc(-1 * var(--a)));  /* Realign rotation with page */
+}
+
+/*
+ * Desktop Styles
+ */
+@media only screen and (min-width: 1366px) {
+  .chooser {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
