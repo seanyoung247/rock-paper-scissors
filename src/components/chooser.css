@@ -49,7 +49,7 @@
     --s = chooser start rotation
     --a = item angle
   */
-  --s: calc(0.75 * (1 / var(--n)));
+  --s: calc(-1.25 * (1 / var(--n)));
   --a: calc((var(--s) * 1turn) + var(--i) * (1turn / var(--n)));
 
   transform:
