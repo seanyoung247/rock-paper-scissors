@@ -16,9 +16,20 @@
 
   transition: 0.25s;
 }
+.menu-icon > span:last-child {
+  border: none;
+  border-top: 4px solid white;
+  background-color: transparent;
+}
 .menu-icon.open > span:first-child {
   transform: rotate(45deg);
 }
 .menu-icon.open > span:nth-child(2) {
   transform: translateY(-8px) rotate(-45deg);
+}
+.menu-icon.open > span:last-child {
+  width: 24px;
+  height: 24px;
+  border: 12px solid #00000000;
+  border-top: 12px solid white;
 }
