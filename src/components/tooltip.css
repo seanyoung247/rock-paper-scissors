@@ -1,0 +1,75 @@
+.tooltipped {
+  position: relative;
+}
+
+.tooltipped:hover > .tooltip-wrapper {
+  display: block;
+}
+.tooltip-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+.tooltip-wrapper.top {
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 10px;
+  transform: translateX(-50%);
+}
+.tooltip-wrapper.left {
+  top: 50%;
+  right: 100%;
+  margin-right: 10px;
+  transform: translateY(-50%);
+}
+.tooltip-wrapper.right {
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+}
+.tooltip-wrapper.bottom {
+  top: 100%;
+  left: 50%;
+  margin-top: 10px;
+  transform: translateX(-50%);
+}
+.tooltip-body::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid #00000000;
+}
+.tooltip-wrapper.top > .tooltip-body::before {
+  top: 100%;
+  left: 50%;
+  border-top: 10px solid white;
+  transform: translateX(-50%);
+}
+.tooltip-wrapper.left > .tooltip-body::before {
+  left: 100%;
+  top: 50%;
+  border-left: 10px solid white;
+  transform: translateY(-50%);
+}
+.tooltip-wrapper.right > .tooltip-body::before {
+  right: 100%;
+  top: 50%;
+  border-right: 10px solid white;
+  transform: translateY(-50%);
+}
+.tooltip-wrapper.bottom > .tooltip-body::before {
+  bottom: 100%;
+  left: 50%;
+  border-bottom: 10px solid white;
+  transform: translateX(-50%);
+}
+
+.tooltip-body {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: max-content;
+}
