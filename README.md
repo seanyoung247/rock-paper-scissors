@@ -17,8 +17,6 @@ This my solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](htt
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -32,15 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Multiview screenshots](./mockup.png)
 
 ### Links
 
@@ -129,10 +119,7 @@ In future projects I'll be continuing to learn React, focusing next on router an
 - Frontend Mentor - [@seanyoung247](https://www.frontendmentor.io/profile/seanyoung247)
 - LinkedIn - [@Sean Young](https://www.linkedin.com/in/sean-young-b4957819a/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- The winning player formula is based on the one described here: [Rock paper scissors - wikipedia](https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons).
+- Circular CSS layout code based on Ana Tudor's answer on this stack overflow question: [stack overflow](https://stackoverflow.com/questions/12813573/position-icons-into-circle).
