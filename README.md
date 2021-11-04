@@ -57,11 +57,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### What I learned
 
-### Code Splitting
+This is my first React project and my main goal was to teach myself the basics of building React apps. I think I've managed to gain a good grasp of the React life-cycle and the basics of how to build components, though I leave it for others to decide how well I've implemented them...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I also set myself the goal of using CSS transitions extensively to get a better grasp of what can be done with them.
 
 ### Analyzing the Bundle Size
 
