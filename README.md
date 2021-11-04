@@ -120,14 +120,14 @@ In future projects I'll be continuing to learn React, focusing next on router an
 
 - [Google](https://www.google.com) - The most important programmer resource ever invented.
 - [Stackoverflow](https://www.stackoverflow.com) - The second most important programmer resource ever invented.
-- [React Docs]() - Invaluable information for getting started.
-- []() - Useful article for getting started and deploying React apps to github pages.
+- [React Docs](https://reactjs.org/docs/getting-started.html) - Invaluable information for getting started.
+- [dev.to](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f) - Useful article for getting started and deploying React apps to github pages.
 
 ## Author
 
-- Github - [Add your name here](https://)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- LinkedIn - [@yourusername](https://)
+- Github - [Add your name here](https://github.com/seanyoung247)
+- Frontend Mentor - [@seanyoung247](https://www.frontendmentor.io/profile/seanyoung247)
+- LinkedIn - [@Sean Young](https://www.linkedin.com/in/sean-young-b4957819a/)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
