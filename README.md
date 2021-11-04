@@ -68,7 +68,7 @@ I also set myself the goal of using CSS transitions extensively to get a better 
 This CSS automatically lays out game options in a circle in the chooser component. This allows different game modes with varying numbers of options without having to write too much specific case code:
 
 ```css
-.chooser.<mode> {
+.chooser.<game-mode> {
   --diameter: <x>px;
   --item-size: <x>px;
   --border-base: <x>px;
@@ -112,6 +112,8 @@ I intend to add a few more game modes and features:
   - Easy (weighted to make player victory more likely)
   - Hard (weighted to try to defeat the player)
   - Random (current mode)
+
+In future projects I'll be continuing to learn React, focusing next on router and/or hooks.
 
 ### Useful resources
 
