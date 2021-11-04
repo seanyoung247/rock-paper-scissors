@@ -96,6 +96,7 @@ _checkWinner(p1, p2) {
 ### Continued development
 
 Possible improvements and features:
+- Render polygon background in chooser instead of a circle
 - Different game styles
 - Tooltips to give context hints/information
 - Winning/Losing explanations (i.e. paper wraps rock etc.)
