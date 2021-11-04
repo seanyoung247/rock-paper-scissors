@@ -63,19 +63,44 @@ This is my first React project and my main goal was to teach myself the basics o
 
 I also set myself the goal of using CSS transitions extensively to get a better grasp of what can be done with them.
 
-### Analyzing the Bundle Size
+#### Interesting code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This CSS automatically lays out game options in a circle in the chooser component. This allows different game modes with varying numbers of options without having to write too much specific case code:
 
-### Making a Progressive Web App
+```css
+.chooser.<mode> {
+  --diameter: <x>px;
+  --item-size: <x>px;
+  --border-base: <x>px;
+}
+.chooser {
+  --offset: calc((var(--diameter) - var(--item-size)) / 2);
+}
+.chooser li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  --s: calc(-1.25 * (1 / var(--n)));
+  --a: calc((var(--s) * 1turn) + var(--i) * (1turn / var(--n)));
 
-### Advanced Configuration
+  transform:
+    translate(-50%, -50%)         /* Move item to center */
+    rotate(var(--a))              /* Rotate to align with required position */
+    translate(var(--offset))      /* Move to circle boundary */
+    rotate(calc(-1 * var(--a)));  /* Realign rotation with page */
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This code calculates the winning player with the mathematical formula outlined in this [wikipedia article](https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons). Generalised to work with variable number of options, returns 0, 1, or 2 for tie, player one, and player two respectively.
 
-### Deployment
+```js
+_checkWinner(p1, p2) {
+  const modr = (x, y) => (x + y) % y;
+  const x = p1 - p2;
+  return x && (modr(modr(x, this._choices.length), 2) + 1);
+}
+```
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
