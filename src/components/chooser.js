@@ -5,7 +5,7 @@ function Chooser(props) {
   return (
     <div className={`chooser ${props.className}`}>
       <div className="circle" />
-      <ul className="" style={{"--n":props.choices.length }}>
+      <ul style={{"--n":props.choices.length }}>
         {props.choices.map((data, index)=>(
           <li key={index} style={{"--i":index}}>
             <button
