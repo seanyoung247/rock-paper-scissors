@@ -85,11 +85,11 @@ class App extends React.Component {
     return (
       <React.StrictMode>
         <header>
-          <div className="col title">
+          <h1 className="col title">
             <img className="title-img"
               src={logo[this.state.mode]}
               alt={this.game.getGameTitle()} />
-          </div>
+          </h1>
           <div className="col menu">
             <Menu
               score={score}
@@ -110,13 +110,13 @@ class App extends React.Component {
           </div>
         </header>
 
-        <section className="gamePanel">
+        <main className="gamePanel">
           <GameUI
             game={this.game}
             step={this.state.step}
             settings={this.settings}
             setScore={this.setScore} />
-        </section>
+        </main>
 
         <footer>
           <RulesModal show={false} rules={this.state.mode}/>

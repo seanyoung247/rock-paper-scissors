@@ -41,8 +41,9 @@ class Menu extends Component {
             </button>
 
             <h2>Settings</h2>
-            <label htmlFor="gameModes">Game : </label>
-            <select className="game-mode" name="gameModes" value={this.props.settings.mode}
+            <label htmlFor="modesSelect">Game Type: </label>
+            <select id="modesSelect" className="game-mode"
+              name="gameModes" value={this.props.settings.mode}
               onChange={(e)=>this.props.settings.callback("mode", e.target.value)}>
 
               {this.props.settings.modes.map((data, index)=>(

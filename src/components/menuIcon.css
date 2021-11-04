@@ -1,6 +1,7 @@
 .menu-icon {
   background: none;
   border: none;
+  color: transparent;
   width: 24px;
   height: 24px;
 }
