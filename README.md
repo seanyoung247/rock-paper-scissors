@@ -47,10 +47,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Solution URL: [Github Repo](https://github.com/seanyoung247/rock-paper-scissors)
 - Live Site URL: [Github Pages](https://seanyoung247.github.io/rock-paper-scissors/)
 
+## My process
 
-## Learn More
+### Built with
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
