@@ -53,13 +53,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS transitions
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
-This is my first React project and my main goal was to teach myself the basics of building React apps. I think I've managed to gain a good grasp of the React life-cycle and the basics of how to build components, though I leave it for others to decide how well I've implemented them...
+This is my first React project and my main goal was to teach myself the basics of building React apps. I think I've managed to gain a reasonable grasp of the React life-cycle and the basics of how to build components, though I leave it for others to decide how well I've implemented them...
 
 I also set myself the goal of using CSS transitions extensively to get a better grasp of what can be done with them.
 
@@ -92,7 +93,7 @@ This CSS automatically lays out game options in a circle in the chooser componen
 }
 ```
 
-This code calculates the winning player with the mathematical formula outlined in this [wikipedia article](https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons). Generalised to work with variable number of options, returns 0, 1, or 2 for tie, player one, and player two respectively.
+This code calculates the winning player with the mathematical formula outlined in this [wikipedia article](https://en.wikipedia.org/wiki/Rock_paper_scissors#Additional_weapons). Generalised to work with variable number of options. Returns 0, 1, or 2 for tie, player one, and player two respectively.
 
 ```js
 _checkWinner(p1, p2) {
@@ -124,9 +125,9 @@ In future projects I'll be continuing to learn React, focusing next on router an
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Github - [Add your name here](https://)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- LinkedIn - [@yourusername](https://)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
