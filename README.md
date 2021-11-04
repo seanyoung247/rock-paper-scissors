@@ -115,10 +115,10 @@ I intend to add a few more game modes and features:
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Google](https://www.google.com) - The most important programmer resource ever invented.
+- [Stackoverflow](https://www.stackoverflow.com) - The second most important programmer resource ever invented.
+- [React Docs]() - Invaluable information for getting started.
+- []() - Useful article for getting started and deploying React apps to github pages.
 
 ## Author
 
