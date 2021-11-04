@@ -95,8 +95,8 @@ _checkWinner(p1, p2) {
 
 ### Continued development
 
-I intend to add a few more game modes and features:
-- Different game styles ()
+Possible improvements and features:
+- Different game styles
 - Tooltips to give context hints/information
 - Winning/Losing explanations (i.e. paper wraps rock etc.)
 - Different computer choice modes based on player heuristics:
