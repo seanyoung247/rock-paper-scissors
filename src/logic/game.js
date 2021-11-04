@@ -1,7 +1,3 @@
-// Possible game modes:
-//  elements: Water, Fire, Ice
-//  Kitsune-Ken: Hunter, Chief, Fox
-//  Halloween: Robot, Pirate, Ninja, Monkey, Zombie
 
 const choices = {
   basic: ["scissors", "paper", "rock"],
@@ -17,8 +13,6 @@ Object.freeze(names);
 
 const modes = ["basic", "spock"];
 Object.freeze(modes);
-
-// Improvement: Could have explinations for winning losing
 
 /**
  * Game class performs logic functions for the rock paper scissors game
