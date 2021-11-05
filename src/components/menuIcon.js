@@ -4,10 +4,10 @@ function MenuIcon(props) {
   return (
     <button className={`menu-icon ${props.show && 'open'}`}
       onClick={props.toggle} >
+      <span/>
+      <span/>
+      <span/>
       menu
-      <span/>
-      <span/>
-      <span/>
     </button>
   );
 }
